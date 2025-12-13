@@ -1,0 +1,54 @@
+import Image from "next/image";
+
+interface ContentCardProps {
+  title: string;
+  subtitle?: string;
+  description: string;
+  buttonText: string;
+  imageSrc: string;
+  imageAlt: string;
+  imagePosition?: "top" | "bottom";
+}
+
+export default function ContentCard({
+  title,
+  subtitle,
+  description,
+  buttonText,
+  imageSrc,
+  imageAlt,
+  imagePosition = "bottom",
+}: ContentCardProps) {
+  return (
+    <section className="bg-white rounded-lg overflow-hidden shadow-sm">
+      {imagePosition === "top" && (
+        <div className="relative w-full h-[160px]">
+          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+        </div>
+      )}
+
+      <div className="p-6">
+        {subtitle && (
+          <h2 className="text-center text-[#441A05] font-bold text-lg mb-2">
+            {subtitle}
+          </h2>
+        )}
+        <h3 className="text-[#441A05] font-bold text-xl mb-3 text-center">
+          {title}
+        </h3>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          {description}
+        </p>
+        <button className="bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold">
+          {buttonText}
+        </button>
+      </div>
+
+      {imagePosition === "bottom" && (
+        <div className="relative w-full h-[160px]">
+          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+        </div>
+      )}
+    </section>
+  );
+}
