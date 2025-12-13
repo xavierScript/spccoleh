@@ -6,11 +6,12 @@ interface MobileMenuProps {
 }
 
 const navigationLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Parish Activities", href: "#parish-activities" },
-  { label: "Daily Mass Readings", href: "#readings" },
-  { label: "Church Society Meetings", href: "#society" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Parish Activities", href: "/parish-activities" },
+  { label: "Church Societies", href: "/society" },
+  { label: "Daily Readings", href: "/readings" },
+  { label: "Stations of the Cross", href: "/stations" },
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {

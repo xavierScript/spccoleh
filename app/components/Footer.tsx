@@ -26,35 +26,50 @@ export default function Footer() {
         <div className="flex flex-col">
           <h4 className="font-semibold mb-3 text-base">Navigation</h4>
           <ul className="space-y-2 text-sm">
-            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
-              <span className="opacity-90 group-hover:opacity-100 relative">
+            <li className="group">
+              <a
+                href="/"
+                className="opacity-90 group-hover:opacity-100 relative block py-1 hover:translate-x-1 transition-transform duration-200"
+              >
                 Home
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-              </span>
+              </a>
             </li>
-            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
-              <span className="opacity-90 group-hover:opacity-100 relative">
+            <li className="group">
+              <a
+                href="/about"
+                className="opacity-90 group-hover:opacity-100 relative block py-1 hover:translate-x-1 transition-transform duration-200"
+              >
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-              </span>
+              </a>
             </li>
-            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
-              <span className="opacity-90 group-hover:opacity-100 relative">
+            <li className="group">
+              <a
+                href="/parish-activities"
+                className="opacity-90 group-hover:opacity-100 relative block py-1 hover:translate-x-1 transition-transform duration-200"
+              >
                 Parish Activities
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-              </span>
+              </a>
             </li>
-            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
-              <span className="opacity-90 group-hover:opacity-100 relative">
+            <li className="group">
+              <a
+                href="/readings"
+                className="opacity-90 group-hover:opacity-100 relative block py-1 hover:translate-x-1 transition-transform duration-200"
+              >
                 Daily Mass Readings
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-              </span>
+              </a>
             </li>
-            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
-              <span className="opacity-90 group-hover:opacity-100 relative">
+            <li className="group">
+              <a
+                href="/society"
+                className="opacity-90 group-hover:opacity-100 relative block py-1 hover:translate-x-1 transition-transform duration-200"
+              >
                 Church Society Meetings
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-              </span>
+              </a>
             </li>
           </ul>
         </div>
