@@ -20,7 +20,7 @@ export default function StationsSection() {
       {/* Image with rounded borders */}
       <div className="relative w-full h-[450px] rounded-lg overflow-hidden shadow-sm">
         <Image
-          src="/picture-stations-of-the-cross.png"
+          src="/picture-stations-of-the-cross.jpg"
           alt="Stations of the Cross"
           fill
           className="object-cover"
