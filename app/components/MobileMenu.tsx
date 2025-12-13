@@ -8,9 +8,9 @@ interface MobileMenuProps {
 const navigationLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Society", href: "#society" },
-  { label: "Stations of the Cross", href: "#stations" },
-  { label: "Today's Readings", href: "#readings" },
+  { label: "Parish Activities", href: "#parish-activities" },
+  { label: "Daily Mass Readings", href: "#readings" },
+  { label: "Church Society Meetings", href: "#society" },
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
@@ -49,7 +49,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </button>
 
         <div className="p-6 pt-16">
-          <h2 className="text-white font-bold text-xl tracking-wide mb-6">Menu</h2>
+          <h2 className="text-white font-bold text-xl tracking-wide mb-6">
+            Menu
+          </h2>
 
           <div className="w-full h-px bg-white/20 mb-6" />
 
