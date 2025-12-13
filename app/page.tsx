@@ -25,7 +25,7 @@ export default function Home() {
         <ContentCard
           title="Daily Readings"
           description="Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris egestas in augue amet. Mattis nec massa sit mauris et nulla."
-          buttonText="Today's Reading"
+          buttonText="Today's Readings"
           imageSrc="/picture-lectionary.png"
           imageAlt="Daily Readings"
         />

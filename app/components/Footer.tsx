@@ -15,19 +15,47 @@ export default function Footer() {
             />
             <span className="font-bold text-base text-lg">SPCC, Oleh</span>
           </div>
-          <p className="text-xs opacity-90">Copyright © 2020 SPCC, Oleh</p>
+          <p className="text-xs opacity-90">
+            {" "}
+            Copyright © {new Date().getFullYear()} SPCC, Oleh
+          </p>
           <p className="text-xs opacity-90">All rights reserved</p>
         </div>
 
         {/* Middle: Navigation */}
         <div className="flex flex-col">
-          <h4 className="font-semibold mb-2">Navigation</h4>
-          <ul className="space-y-1 text-sm opacity-90">
-            <li>Home</li>
-            <li>About</li>
-            <li>Parish Activities</li>
-            <li>Daily Mass Readings</li>
-            <li>Church Society Meetings</li>
+          <h4 className="font-semibold mb-3 text-base">Navigation</h4>
+          <ul className="space-y-2 text-sm">
+            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
+              <span className="opacity-90 group-hover:opacity-100 relative">
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
+              </span>
+            </li>
+            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
+              <span className="opacity-90 group-hover:opacity-100 relative">
+                About
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
+              </span>
+            </li>
+            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
+              <span className="opacity-90 group-hover:opacity-100 relative">
+                Parish Activities
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
+              </span>
+            </li>
+            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
+              <span className="opacity-90 group-hover:opacity-100 relative">
+                Daily Mass Readings
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
+              </span>
+            </li>
+            <li className="cursor-pointer hover:translate-x-1 transition-transform duration-200 group">
+              <span className="opacity-90 group-hover:opacity-100 relative">
+                Church Society Meetings
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
+              </span>
+            </li>
           </ul>
         </div>
 

@@ -1,3 +1,5 @@
+"use client";
+
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
@@ -18,24 +20,56 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     <>
       {/* Overlay */}
       <div
-        className="fixed inset-0 bg-black/50 z-40 transition-opacity animate-in fade-in duration-200"
+        className="fixed inset-0 bg-black/60 z-40 transition-all duration-300 animate-in fade-in backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Menu Panel */}
-      <div className="fixed top-0 right-0 h-full w-64 bg-[#441A05] z-50 shadow-xl animate-in slide-in-from-right duration-300">
-        <div className="p-6">
-          <h2 className="text-white font-bold text-xl mb-6">Navigation</h2>
+      <div className="fixed top-0 right-0 h-full w-72 bg-gradient-to-br from-[#441A05] to-[#2A1003] z-50 shadow-2xl animate-in slide-in-from-right duration-300 overflow-y-auto">
+        {/* Fixed close button */}
+        <button
+          onClick={onClose}
+          className="fixed top-4 right-4 w-8 h-8 flex items-center justify-center text-white hover:bg-white/10 rounded transition-colors z-[60]"
+          aria-label="Close menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+
+        <div className="p-6 pt-16">
+          <h2 className="text-white font-bold text-xl tracking-wide mb-6">Menu</h2>
+
+          <div className="w-full h-px bg-white/20 mb-6" />
+
           <nav>
-            <ul className="space-y-4">
-              {navigationLinks.map((link) => (
-                <li key={link.href}>
+            <ul className="space-y-1">
+              {navigationLinks.map((link, index) => (
+                <li
+                  key={link.href}
+                  className="animate-in fade-in slide-in-from-right duration-300"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
                   <a
                     href={link.href}
-                    className="text-white text-base block hover:text-white/80 transition-colors"
+                    className="text-white/90 text-base block py-3 px-4 rounded-lg hover:bg-white/10 hover:text-white hover:pl-6 transition-all duration-200 relative group"
                     onClick={onClose}
                   >
-                    {link.label}
+                    <span className="relative">
+                      {link.label}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/80 group-hover:w-full transition-all duration-300" />
+                    </span>
                   </a>
                 </li>
               ))}

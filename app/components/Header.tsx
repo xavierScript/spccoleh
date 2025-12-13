@@ -7,9 +7,8 @@ import MobileMenu from "./MobileMenu";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <>
@@ -22,10 +21,10 @@ export default function Header() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
         {/* Top bar */}
-        <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
+        <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-[500]">
           {/* Left icon */}
           <Image
             src="/icon-st peter.png"
@@ -37,11 +36,14 @@ export default function Header() {
           {/* Hamburger/Close button */}
           <button
             type="button"
-            className="w-8 h-8 flex items-center justify-center z-50 relative cursor-pointer hover:opacity-80 transition-opacity"
+            className="w-8 h-8 flex items-center justify-center z-[510] relative cursor-pointer hover:opacity-80 transition-opacity"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            onClick={toggleMenu}
+            onClick={() => {
+              console.log("hamburger button clicked");
+              toggleMenu();
+            }}
           >
-            <Image
+            <img
               src={isMenuOpen ? "/close.svg" : "/hamburger.svg"}
               alt={isMenuOpen ? "Close" : "Menu"}
               width={24}
@@ -61,7 +63,7 @@ export default function Header() {
         </div>
       </header>
 
-      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
     </>
   );
 }
