@@ -1,23 +1,27 @@
 interface SocietyItem {
   title: string;
   description: string;
+  meetingTime: string;
 }
 
 const societies: SocietyItem[] = [
   {
     title: "CHOIR",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris egestas in augue amet. Mattis nec massa sit mauris et nulla.",
+      "Our parish choir brings together voices of all ages to lead worship and enhance the liturgy with inspiring music. Join us to praise through song and fellowship.",
+    meetingTime: "Every Saturday at 4:00 PM",
   },
   {
     title: "ALTAR SERVERS",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris egestas in augue amet. Mattis nec massa sit mauris et nulla.",
+      "Altar servers assist during Mass and other liturgical celebrations, learning the importance of service and participating actively in the church's sacred rituals.",
+    meetingTime: "Every Sunday at 8:00 AM",
   },
   {
     title: "LAY READERS",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris egestas in augue amet. Mattis nec massa sit mauris et nulla.",
+      "Lay readers proclaim the Word of God during services, helping the congregation engage with scripture. They play a vital role in sharing God’s message with the community.",
+    meetingTime: "Every Saturday at 3:00 PM",
   },
 ];
 
@@ -41,6 +45,9 @@ export default function ChurchSocietySection() {
               </h4>
               <p className="text-sm text-gray-700 leading-relaxed">
                 {society.description}
+              </p>
+              <p className="text-sm text-gray-500 italic mt-1">
+                Meeting Time: {society.meetingTime}
               </p>
             </div>
           </div>

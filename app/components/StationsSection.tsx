@@ -8,8 +8,9 @@ export default function StationsSection() {
           Stations of the Cross
         </h3>
         <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris
-          egestas in augue amet. Mattis nec massa sit mauris et nulla.
+          Journey with us through the Stations of the Cross, reflecting on the
+          passion and sacrifice of Jesus Christ. Join our parish in this
+          meaningful devotion to deepen your faith and spiritual connection.
         </p>
         <button className="bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300">
           See more

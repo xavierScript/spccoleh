@@ -16,7 +16,7 @@ export default function Home() {
         <ContentCard
           title="Parish Activities"
           subtitle="OUR PROGRAM"
-          description="Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris egestas in augue amet. Mattis nec massa sit mauris et nulla."
+          description="Discover the variety of activities organized at St. Peter's Parish, from youth outreach programs to community service events. Join us and be part of our vibrant parish life."
           buttonText="See more"
           imageSrc="/picture-missal.png"
           imageAlt="Parish Activities"
@@ -24,7 +24,7 @@ export default function Home() {
 
         <ContentCard
           title="Daily Readings"
-          description="Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris egestas in augue amet. Mattis nec massa sit mauris et nulla."
+          description="Access the daily scripture readings to guide your prayer and reflection. Stay connected with the Word of God every day."
           buttonText="Today's Readings"
           imageSrc="/picture-lectionary.png"
           imageAlt="Daily Readings"
@@ -32,7 +32,7 @@ export default function Home() {
 
         <ContentCard
           title="Catechism Corner"
-          description="Lorem ipsum dolor sit amet consectetur. Hendrerit consequat mauris egestas in augue amet. Mattis nec massa sit mauris et nulla."
+          description="Learn and deepen your understanding of Catholic teachings. Explore lessons, stories, and guidance to strengthen your faith."
           buttonText="Learn more"
           imageSrc="/picture-bible.png"
           imageAlt="Catechism Corner"
