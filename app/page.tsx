@@ -16,7 +16,7 @@ export default function Home() {
         <ContentCard
           title="Parish Activities"
           subtitle="OUR PROGRAM"
-          description="Discover the variety of activities organized at St. Peter's Parish, from youth outreach programs to community service events. Join us and be part of our vibrant parish life."
+          description="Discover the variety of activities organized at St. Peter's Parish. Join us and be part of our vibrant parish life."
           buttonText="See more"
           imageSrc="/picture-missal.png"
           imageAlt="Parish Activities"
