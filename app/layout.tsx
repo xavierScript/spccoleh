@@ -9,8 +9,8 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "St. Patrick's Catholic Chaplaincy, Oleh",
-  description: "St. Patrick's Catholic Chaplaincy, Oleh",
+  title: "St. Peter's Catholic Chaplaincy, Oleh",
+  description: "St. Peter's Catholic Chaplaincy, Oleh",
 };
 
 export default function RootLayout({

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex items-start gap-3 mb-6">
           <Image
             src="/icon-st peter.png"
-            alt="St. Patrick Icon"
+            alt="St. Peter Icon"
             width={32}
             height={32}
           />
