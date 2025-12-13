@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function StationsSection() {
   return (
-    <section className="rounded-lg overflow-hidden mb-12">
-      <div>
+    <section className="mb-12">
+      <div className="mb-4">
         <h3 className="text-[#441A05] font-bold text-xl mb-3 text-center">
           Stations of the Cross
         </h3>
@@ -15,7 +15,9 @@ export default function StationsSection() {
           See more
         </button>
       </div>
-      <div className="relative w-full h-[280px]">
+
+      {/* Image with rounded borders */}
+      <div className="relative w-full h-[450px] rounded-lg overflow-hidden shadow-sm">
         <Image
           src="/picture-stations-of-the-cross.png"
           alt="Stations of the Cross"
