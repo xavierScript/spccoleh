@@ -11,7 +11,6 @@ const navigationLinks = [
   { label: "Parish Activities", href: "/parish-activities" },
   { label: "Church Societies", href: "/society" },
   { label: "Daily Readings", href: "/readings" },
-  { label: "Stations of the Cross", href: "/stations" },
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
