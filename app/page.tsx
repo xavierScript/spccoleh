@@ -18,6 +18,7 @@ export default function Home() {
           subtitle="OUR PROGRAM"
           description="Discover the variety of activities organized at St. Peter's Parish. Join us and be part of our vibrant parish life."
           buttonText="See more"
+          buttonHref="/parish-activities"
           imageSrc="/picture-missal.jpg"
           imageAlt="Parish Activities"
         />
@@ -26,6 +27,7 @@ export default function Home() {
           title="Daily Readings"
           description="Access the daily scripture readings to guide your prayer and reflection. Stay connected with the Word of God every day."
           buttonText="Today's Readings"
+          buttonHref="/readings"
           imageSrc="/picture-lectionary.jpg"
           imageAlt="Daily Readings"
         />
@@ -34,6 +36,7 @@ export default function Home() {
           title="Catechism Corner"
           description="Learn and deepen your understanding of Catholic teachings. Explore lessons, stories, and guidance to strengthen your faith."
           buttonText="Learn more"
+          buttonHref="https://usccb.cld.bz/Catechism-of-the-Catholic-Church2/4/"
           imageSrc="/picture-bible.jpg"
           imageAlt="Catechism Corner"
         />

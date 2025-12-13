@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface SocietyItem {
   title: string;
   description: string;
@@ -15,7 +17,7 @@ const societies: SocietyItem[] = [
     title: "ALTAR SERVERS",
     description:
       "Altar servers assist during Mass and other liturgical celebrations, learning the importance of service and participating actively in the church's sacred rituals.",
-    meetingTime: "Every Sunday at 8:00 AM",
+    meetingTime: "Every Saturday at 4:00 PM",
   },
   {
     title: "LAY READERS",
@@ -56,9 +58,12 @@ export default function ChurchSocietySection() {
 
       {/* Right-aligned button */}
       <div className="mt-8 flex justify-end">
-        <button className="bg-[#441A05] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300">
+        <Link
+          href="/society"
+          className="bg-[#441A05] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block"
+        >
           See more
-        </button>
+        </Link>
       </div>
     </section>
   );

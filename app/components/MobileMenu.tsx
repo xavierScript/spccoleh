@@ -14,22 +14,26 @@ const navigationLinks = [
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
-  if (!isOpen) return null;
-
   return (
     <>
       {/* Overlay */}
       <div
-        className="fixed inset-0 bg-black/60 z-40 transition-all duration-300 animate-in fade-in backdrop-blur-sm"
+        className={`fixed inset-0 bg-black/60 z-40 backdrop-blur-sm transition-opacity duration-300 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
         onClick={onClose}
       />
 
       {/* Menu Panel */}
-      <div className="fixed top-0 right-0 h-full w-72 bg-gradient-to-br from-[#441A05] to-[#2A1003] z-50 shadow-2xl animate-in slide-in-from-right duration-300 overflow-y-auto">
+      <div
+        className={`fixed top-0 left-0 h-full w-72 bg-gradient-to-br from-[#441A05] to-[#2A1003] z-50 shadow-2xl overflow-y-auto transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
         {/* Fixed close button */}
         <button
           onClick={onClose}
-          className="fixed top-4 right-4 w-8 h-8 flex items-center justify-center text-white hover:bg-white/10 rounded transition-colors z-[60]"
+          className="fixed top-4 left-4 w-8 h-8 flex items-center justify-center text-white hover:bg-white/10 rounded transition-colors z-[60]"
           aria-label="Close menu"
         >
           <svg
@@ -60,8 +64,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {navigationLinks.map((link, index) => (
                 <li
                   key={link.href}
-                  className="animate-in fade-in slide-in-from-right duration-300"
-                  style={{ animationDelay: `${index * 50}ms` }}
+                  className={`transition-all duration-300 ${
+                    isOpen
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-x-4"
+                  }`}
+                  style={{
+                    transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
+                  }}
                 >
                   <a
                     href={link.href}

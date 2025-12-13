@@ -12,9 +12,9 @@ export default function AboutPage() {
         </h1>
         <p className="text-base text-gray-700 leading-relaxed">
           St. Peter's Catholic Chaplaincy is a welcoming community committed to
-          faith, service and fellowship. We hold regular masses, Bible study
-          groups and community outreach programmes. This page contains
-          information about our history, mission, and how to get involved.
+          faith, service and fellowship. We hold regular masses and Bible study
+          groups. This page contains information about our history, mission, and
+          how to get involved.
         </p>
       </main>
 
