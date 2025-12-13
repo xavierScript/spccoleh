@@ -23,7 +23,7 @@ const societies: SocietyItem[] = [
 
 export default function ChurchSocietySection() {
   return (
-    <section className="bg-white rounded-lg p-6 shadow-sm">
+    <section className="rounded-lg">
       <h3 className="text-[#441A05] font-bold text-xl mb-4 text-center">
         Church Society Meetings
       </h3>
@@ -42,7 +42,7 @@ export default function ChurchSocietySection() {
       </div>
 
       <div className="mt-6 text-center">
-        <button className="bg-[#441A05] text-white px-6 py-2 rounded-full text-sm font-semibold">
+        <button className="bg-[#441A05] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300">
           See more
         </button>
       </div>

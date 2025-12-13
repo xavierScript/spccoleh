@@ -20,7 +20,6 @@ export default function Home() {
           buttonText="See more"
           imageSrc="/picture-missal.png"
           imageAlt="Parish Activities"
-          imagePosition="bottom"
         />
 
         <ContentCard
@@ -29,7 +28,6 @@ export default function Home() {
           buttonText="Today's Reading"
           imageSrc="/picture-lectionary.png"
           imageAlt="Daily Readings"
-          imagePosition="top"
         />
 
         <ContentCard
@@ -38,7 +36,6 @@ export default function Home() {
           buttonText="Learn more"
           imageSrc="/picture-bible.png"
           imageAlt="Catechism Corner"
-          imagePosition="top"
         />
 
         <ChurchSocietySection />

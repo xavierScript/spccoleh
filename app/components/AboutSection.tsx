@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="bg-[#441A05] rounded-lg p-6 text-white mt-6">
+    <section className="bg-[#441A05] rounded-lg p-6 text-white mt-6 mb-12">
       {/* Centered heading */}
       <h2 className="text-xl font-bold mb-3 text-center">About Us</h2>
 
@@ -13,7 +13,7 @@ export default function AboutSection() {
 
       {/* Right-aligned button */}
       <div className="flex justify-end">
-        <button className="bg-white text-[#441A05] px-4 py-2 rounded-full text-sm font-semibold">
+        <button className="bg-white text-[#441A05] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#441A05] hover:text-white hover:ring-2 hover:ring-white transition-all duration-300">
           Read more
         </button>
       </div>
