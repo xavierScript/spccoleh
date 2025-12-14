@@ -58,7 +58,7 @@ export default function Header() {
           <h1 className="text-white text-xl font-bold leading-tight">
             St. Peter&apos;s Catholic
             <br />
-            Chaplaincy, Oleh
+            Chaplaincy, Oleh Campus
           </h1>
         </div>
       </header>
