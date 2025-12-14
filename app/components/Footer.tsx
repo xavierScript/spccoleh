@@ -67,7 +67,7 @@ export default function Footer() {
                 href="/society"
                 className="opacity-90 group-hover:opacity-100 relative block py-1 hover:translate-x-1 transition-transform duration-200"
               >
-                Church Society Meetings
+                Church Societies
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
               </a>
             </li>

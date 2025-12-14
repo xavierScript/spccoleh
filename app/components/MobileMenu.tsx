@@ -10,7 +10,7 @@ const navigationLinks = [
   { label: "About", href: "/about" },
   { label: "Parish Activities", href: "/parish-activities" },
   { label: "Church Societies", href: "/society" },
-  { label: "Daily Readings", href: "/readings" },
+  { label: "Daily Mass Readings", href: "/readings" },
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
