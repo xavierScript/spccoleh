@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface ContentCardProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   description: string;
   buttonText: string;

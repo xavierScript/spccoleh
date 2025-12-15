@@ -43,7 +43,7 @@ export default function Home() {
         <ContentCard
           title="Catechism Corner"
           description="Learn and deepen your understanding of Catholic teachings. Explore lessons, stories, and guidance to strengthen your faith."
-          buttonText="Learn more"
+          buttonText="Learn about the Faith"
           buttonHref="https://usccb.cld.bz/Catechism-of-the-Catholic-Church2/4/"
           imageSrc="/picture-bible.jpg"
           imageAlt="Catechism Corner"

@@ -35,8 +35,8 @@ export default function ReadingsPage() {
             >
               Universalis Africa/Nigeria Mass Readings
             </a>{" "}
-            directly for the complete experience. This embedding is for
-            pastoral/educational purposes only.
+            directly for the complete experience. This embedding is for pastoral
+            purposes only.
           </p>
         </div>
 
