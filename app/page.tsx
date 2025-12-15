@@ -31,6 +31,14 @@ export default function Home() {
           imageSrc="/picture-lectionary.jpg"
           imageAlt="Daily Readings"
         />
+        <ContentCard
+          title="Bible Online"
+          description="Read the Holy Scriptures online at any time. Deepen your faith through daily meditation on God’s Word."
+          buttonText="Read the Bible"
+          buttonHref="https://thekingsbible.com/"
+          imageSrc="/picture-with-bible.jpg"
+          imageAlt="Bible"
+        />
 
         <ContentCard
           title="Catechism Corner"
