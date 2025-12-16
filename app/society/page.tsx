@@ -20,7 +20,7 @@ export default function SocietyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ContentCard
             title="Altar Servers"
-            description="Serve at the altar during Mass and liturgical celebrations. Training is provided for young people who wish to assist the clergy and participate in the sacred rites."
+            description="The Altar Servers assist during the celebration of Mass and other liturgical celebrations; with emphasis placed on learning the importance of service and participating actively in the Church's Sacred rituals."
             buttonText="Serve on the Sanctuary"
             imageSrc="/picture-altar-boys.jpg"
             imageAlt="Altar servers"
@@ -28,8 +28,8 @@ export default function SocietyPage() {
           />
 
           <ContentCard
-            title="Lay Readers"
-            description="Proclaim the Scriptures during Mass and assist with liturgical readings. Training and schedules are provided for new readers who wish to serve the assembly."
+            title="Lay Readers (Lectors)"
+            description="The Lectors proclaim the Word of God during Liturgical Worship in a bid to aiding the congregation to engage with the Scripture pages. This function plays a very important role in the growth of the life of the Church — thus, making the Gospel message come alive (Hebrews 4:12)."
             buttonText="Serve as a Reader"
             imageSrc="/picture-bible.jpg"
             imageAlt="Lay reader proclaiming the Word"
@@ -38,7 +38,7 @@ export default function SocietyPage() {
 
           <ContentCard
             title="Choir"
-            description="Lead the assembly in song and enhance our liturgies with sacred music. We welcome singers and instrumentalists of all ages. Rehearsals are held weekly."
+            description="Our parish choir brings together voices of all ages in their cultural diversity to lead worship during liturgical celebrations. Join us to praise through active participation with songs in fellowship."
             buttonText="Sing for the Lord"
             imageSrc="/picture-missal.jpg"
             imageAlt="Choir singing"
