@@ -8,7 +8,7 @@ export default function ReadingsPage() {
 
       <main className="px-4 py-12 max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-6 text-[#441A05]">
-          Daily Bible Readings
+          Daily Mass Readings
         </h1>
 
         {/* Attribution */}
