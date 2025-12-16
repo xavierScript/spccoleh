@@ -24,7 +24,7 @@ export default function SocietyPage() {
             buttonText="Serve on the Sanctuary"
             imageSrc="/picture-altar-boys.jpg"
             imageAlt="Altar servers"
-            meetingTime="Meeting Time: Every Saturday at 4:00 PM"
+            meetingTime="Every Saturday after the morning Mass and at 4:00 PM"
           />
 
           <ContentCard
@@ -33,7 +33,7 @@ export default function SocietyPage() {
             buttonText="Serve as a Reader"
             imageSrc="/picture-bible.jpg"
             imageAlt="Lay reader proclaiming the Word"
-            meetingTime="Meeting Time: Every Saturday at 4:00 PM"
+            meetingTime="Every Saturday at 4:30 PM (in the Church compound)"
           />
 
           <ContentCard
@@ -42,7 +42,7 @@ export default function SocietyPage() {
             buttonText="Sing for the Lord"
             imageSrc="/picture-missal.jpg"
             imageAlt="Choir singing"
-            meetingTime="Meeting Time: Every Saturday at 4:00 PM"
+            meetingTime="Every Tuesday, Thursday and Saturday at 4:00 PM"
           />
 
           <ContentCard
