@@ -408,6 +408,25 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
+
+        {/* Location Map */}
+        {/* <section>
+          <h2 className="text-2xl lg:text-3xl font-bold text-[#441A05] mb-6 text-center">
+            Find Us
+          </h2>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8087563896845!2d6.202815!3d5.587556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ad7d7f8e6f5d%3A0x1f1e2b3c4d5e6f7a!2sOleh%2C%20Delta%20State%2C%20Nigeria!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="St. Peter's Catholic Chaplaincy Location"
+            />
+          </div>
+        </section> */}
       </main>
 
       <Footer />
