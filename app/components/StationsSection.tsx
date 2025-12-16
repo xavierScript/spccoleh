@@ -12,9 +12,14 @@ export default function StationsSection() {
           passion and sacrifice of Jesus Christ. Join our parish in this
           meaningful devotion to deepen your faith and spiritual connection.
         </p>
-        <button className="bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300">
+        <a
+          href="https://mycatholic.life/catholic-prayers/stations-of-the-cross/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300"
+        >
           See more
-        </button>
+        </a>
       </div>
 
       {/* Image with rounded borders */}
