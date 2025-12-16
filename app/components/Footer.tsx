@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="flex flex-col">
           <h4 className="font-semibold mb-2">Contact Us</h4>
           <ul className="space-y-1 text-sm opacity-90">
-            <li>Phone no: 080262552442</li>
+            <li>Phone no: 08032342601, 08036076656</li>
             <li>
               Address:{" "}
               <span className="block">
