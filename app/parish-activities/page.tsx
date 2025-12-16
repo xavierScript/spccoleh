@@ -9,9 +9,9 @@ export default function ParishActivitiesPage() {
       <main className="px-4 py-12 max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">Parish Activities</h1>
         <p className="text-base text-gray-700 leading-relaxed">
-          Our parish runs a variety of activities including charitable outreach,
-          youth programmes, and liturgical ministries. Check the schedule below
-          or contact the parish office to join any of our groups.
+          Our parish runs a variety of activities, Youth/Student programmes that
+          run through the year, and Liturgical Celebrations. Check the schedule
+          below or contact the parish office to join any of our groups.
         </p>
       </main>
 

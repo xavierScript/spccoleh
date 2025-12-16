@@ -7,10 +7,12 @@ export default function AboutSection() {
       <h2 className="text-xl font-bold mb-3 text-center">About Us</h2>
 
       <p className="text-sm leading-relaxed mb-4">
-        St. Peter's Catholic Chaplaincy is a welcoming community committed to
-        faith, service and fellowship. We hold regular masses and Bible study
-        groups. This page contains information about our history, mission, and
-        how to get involved.
+        St. Peter's Catholic Chaplaincy is one of the Parish under the Catholic
+        Diocese of Warri committed to building faith, service and fellowship
+        with one another. We hold regular Masses alternated through the week
+        days, with emphasis on the Word of God and the Eucharistic Worship. This
+        page contains information about our history, mission, and how to get
+        involved.
       </p>
 
       {/* Right-aligned button */}

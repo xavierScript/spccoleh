@@ -10,20 +10,20 @@ const societies: SocietyItem[] = [
   {
     title: "CHOIR",
     description:
-      "Our parish choir brings together voices of all ages to lead worship and enhance the liturgy with inspiring music. Join us to praise through song and fellowship.",
-    meetingTime: "Every Saturday at 4:00 PM",
+      "Our parish choir brings together voices of all ages in their cultural diversity to lead worship during liturgical celebrations. Join us to praise through active participation with songs in fellowship.",
+    meetingTime: "Every Tuesday, Thursday and Saturday at 4:00 PM",
   },
   {
     title: "ALTAR SERVERS",
     description:
-      "Altar servers assist during Mass and other liturgical celebrations, learning the importance of service and participating actively in the church's sacred rituals.",
-    meetingTime: "Every Saturday at 4:00 PM",
+      "The Altar Servers assist during the celebration of Mass and other liturgical celebrations; with emphasis placed on learning the importance of service and participating actively in the Church's Sacred rituals.",
+    meetingTime: "Every Saturday after the morning Mass and at 4:00 PM",
   },
   {
-    title: "LAY READERS",
+    title: "LAY READERS (LECTORS)",
     description:
-      "Lay readers proclaim the Word of God during services, helping the congregation engage with scripture. They play a vital role in sharing God’s message with the community.",
-    meetingTime: "Every Saturday at 3:00 PM",
+      "The Lectors proclaim the Word of God during Liturgical Worship in a bid to aiding the congregation to engage with the Scripture pages. This function plays a very important role in the growth of the life of the Church — thus, making the Gospel message come alive (Hebrews 4:12).",
+    meetingTime: "Every Saturday at 4:30 PM (in the Church compound)",
   },
 ];
 

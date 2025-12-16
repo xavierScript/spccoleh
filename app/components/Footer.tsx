@@ -81,7 +81,9 @@ export default function Footer() {
             <li>Phone no: 080262552442</li>
             <li>
               Address:{" "}
-              <span className="block">Opposite Faculty of Eng, DELSU</span>
+              <span className="block">
+                Delta State University, Oleh Campus. Behind Provost's Quarters
+              </span>
             </li>
           </ul>
         </div>
