@@ -41,7 +41,9 @@ export default function ContentCard({
         </p>
 
         {meetingTime && (
-          <p className="text-sm text-gray-500 italic mb-4">{meetingTime}</p>
+          <p className="text-sm text-gray-500 italic mb-4 whitespace-pre-line">
+            {meetingTime}
+          </p>
         )}
 
         {buttonHref ? (

@@ -54,29 +54,104 @@ const cmoExcos = [
 
 const nfcsExcos = [
   {
-    name: "Bro. David Okeke",
+    name: "Bro. Madudani Emmanuel",
     position: "President",
-    image: "/exco-placeholder.jpg",
+    image: "/madudani.jpeg",
   },
   {
-    name: "Sis. Blessing Okafor",
-    position: "Vice President",
-    image: "/exco-placeholder.jpg",
+    name: "Bro. Ikwedu Great",
+    position: "Vice President (Male)",
+    image: "/great-vp.jpeg",
   },
+  // {
+  //   name: "Sis. Blessing Okafor",
+  //   position: "Vice President",
+  //   image: "/exco-placeholder.jpg",
+  // },
   {
-    name: "Bro. Emmanuel Eze",
+    name: "Sis. Ukperibayire Naomi",
     position: "Secretary",
-    image: "/exco-placeholder.jpg",
+    image: "/naomi.jpeg",
   },
   {
-    name: "Sis. Joy Nwankwo",
-    position: "Treasurer",
-    image: "/exco-placeholder.jpg",
+    name: "Bro. Odogbor Gabriel",
+    position: "Assistant Secretary",
+    image: "/odogbor.jpeg",
   },
   {
-    name: "Bro. Michael Adeyemi",
-    position: "PRO",
-    image: "/exco-placeholder.jpg",
+    name: "Sis. Onowu Favour",
+    position: "Treasurer 1",
+    image: "/onowu.jpeg",
+  },
+  {
+    name: "Sis. Onoja Eucharia",
+    position: "Treasurer 2",
+    image: "/eucharia.jpeg",
+  },
+  {
+    name: "Sis. Akpochafo Joy",
+    position: "Director of Socials",
+    image: "/akpochafo.jpeg",
+  },
+  {
+    name: "Sis. Ebulu Jennifer",
+    position: "Director of Sports",
+    image: "/ebulu.jpeg",
+  },
+  {
+    name: "Bro. Igboaku Emmanuel",
+    position: "Director of Sports",
+    image: "/igboaku.jpeg",
+  },
+  {
+    name: "Bro. Idijie Emmanuel",
+    position: "Provost",
+    image: "/idijie.jpeg",
+  },
+  {
+    name: "Bro. Ezema Daniel Jayden",
+    position: "PRO 1",
+    image: "/jayden.jpeg",
+  },
+  {
+    name: "Sis. Nwanze Benita",
+    position: "PRO 2",
+    image: "/nwanze.jpeg",
+  },
+  {
+    name: "Bro. Fole Michael",
+    position: "Prayer Coordinator II",
+    image: "/fole.jpeg",
+  },
+  {
+    name: "Bro. Ayeta Raphael (Ezege 1)",
+    position: "Welfare Papa",
+    image: "/ayeta.jpeg",
+  },
+  {
+    name: "Sis. Ebu Anthonia",
+    position: "Welfare Coordinator",
+    image: "/ebu.jpeg",
+  },
+  {
+    name: "Sis. Ogwu Ann",
+    position: "Welfare Committee",
+    image: "/ogwu-ann.jpeg",
+  },
+  {
+    name: "Sis. Onokhomen Anthonia",
+    position: "Welfare Committee",
+    image: "/anthonia-welfare.jpeg",
+  },
+  {
+    name: "Sis. Barnabas Valentina",
+    position: "Welfare Committee",
+    image: "/valentina.jpeg",
+  },
+  {
+    name: "Bro. Asuquo Christian",
+    position: "Welfare Committee",
+    image: "/christian.jpeg",
   },
 ];
 
@@ -229,9 +304,10 @@ export default function AboutPage() {
     },
     {
       src: "/priest-with-cwo-serving-mass.jpeg",
-      alt: "Priest with CWO Serving Mass",
+      alt: "Priest with CWO",
     },
     { src: "/priest-with-cwo.jpeg", alt: "Priest with CWO" },
+    { src: "/priest-with-cwo-serving-mass.jpeg", alt: "Priest with CWO" },
     { src: "/priest-with-cmo.jpeg", alt: "Priest with CMO" },
     {
       src: "/priest-with-children-for-baptism.jpeg",
@@ -254,27 +330,54 @@ export default function AboutPage() {
     {
       name: "Jesus Christ",
       position: "Our Lord and Savior",
-      image: "/picture-jesus.jpg",
+      image: "/jesus-christ.jpg",
     },
     {
       name: "Virgin Mary",
       position: "Mother of God",
-      image: "/picture-mary.jpg",
+      image: "/mary-immaculate-heart.jpg",
     },
     {
-      name: "Pope Francis",
+      name: "Pope Leo XIV",
       position: "Holy Father",
-      image: "/picture-pope.jpg",
+      image: "/pope-leo-xiv.jpeg",
     },
     {
-      name: "Bishop Anthony Ewherido",
+      name: "Archbishop Michael Francis Crotty",
+      position: "Papal Nuncio to Nigeria",
+      image: "/papal-nuncio-nigeria.png",
+    },
+    {
+      name: "Archbishop Augustine Obiora Akubeze",
+      position:
+        "Metropolitan Archbishop of the Roman Catholic Archdiocese of Benin City",
+      image: "/bishop-akubeze.jpeg",
+    },
+    {
+      name: "Bishop John Okeoghene Afareha",
+      position: "Emeritus Bishop of Warri Diocese",
+      image: "/bishop-afareha.jpg",
+    },
+    {
+      name: "Bishop Anthony Ovayero Ewherido",
       position: "Bishop of Warri Diocese",
       image: "/bishop-ewherido.jpeg",
     },
     {
-      name: "Rev. Fr. Cyril",
-      position: "Parish Priest",
-      image: "/father-cyril.jpeg",
+      name: "Bishop John Okeoghene Afareha with Bishop Anthony Ovayero Ewherido",
+      position: "Emeritus Bishop and Bishop of Warri Diocese",
+      image: "/bishops-afareha-with-ewherido.jpeg",
+    },
+
+    {
+      name: "Very Rev. Fr. Dr. Stephen Ogheneovo CSP",
+      position: "Regional Vicar for Oleh Region",
+      image: "/father-stephen.jpeg",
+    },
+    {
+      name: "Rev. Fr. Cyril Basikoro",
+      position: "Chaplain, St. Peter's Catholic Chaplaincy, Oleh Campus",
+      image: "/parish-priest-on-mic.jpg",
     },
   ];
 
@@ -410,7 +513,7 @@ export default function AboutPage() {
         </div>
 
         {/* Location Map */}
-        {/* <section>
+        <section>
           <h2 className="text-2xl lg:text-3xl font-bold text-[#441A05] mb-6 text-center">
             Find Us
           </h2>
@@ -426,7 +529,7 @@ export default function AboutPage() {
               title="St. Peter's Catholic Chaplaincy Location"
             />
           </div>
-        </section> */}
+        </section>
       </main>
 
       <Footer />

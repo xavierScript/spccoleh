@@ -11,9 +11,9 @@ export default function ParishActivitiesPage() {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Parish Activities</h1>
           <p className="text-base text-gray-700 leading-relaxed">
-            Our parish runs a variety of activities, student programmes, and
-            liturgical celebrations. See the regular schedule below and contact
-            the parish office to get involved.
+            Our parish runs a variety of activities, Student programmes, and
+            Liturgical celebrations. See the regular schedule below and contact
+            the Parish Office to get involved.
           </p>
         </div>
 
@@ -22,10 +22,10 @@ export default function ParishActivitiesPage() {
             title="Daily Mass"
             description="Daily Mass is offered throughout the week at scheduled times; all are welcome to attend and receive the Eucharist."
             buttonText="Contact Office"
-            imageSrc="/priest-with-cwo-serving-mass.jpeg"
+            imageSrc="/priest-with-altar-boys.jpeg"
             imageAlt="Priest serving mass"
             meetingTime={
-              "Mondays, Wednesdays, Fridays — 5:00 PM; Tuesdays, Thursdays, Saturdays — 6:30 AM; Sundays — 6:00 AM and 7:00 AM (when school is in session) otherwise 6:30 AM"
+              "Mondays, Wednesdays, Fridays — 5:00 PM\nTuesdays, Thursdays, Saturdays — 6:30 AM\nSundays — 6:00 AM and 7:00 AM (when school is in session) otherwise 6:30 AM"
             }
           />
 
@@ -35,17 +35,17 @@ export default function ParishActivitiesPage() {
             buttonText="Enroll"
             imageSrc="/newly-wedded-couples.jpeg"
             imageAlt="Newly wedded couples"
-            meetingTime={"6:00 PM — 7:00 PM"}
+            meetingTime={"Mondays, 6:00 PM — 7:00 PM"}
           />
 
           <ContentCard
             title="Catechism Classes"
-            description="Religious instruction for children and young people preparing for sacraments and continued faith formation."
+            description="Religious instruction for children and young people preparing for the Sacrament(s) and continued faith formation."
             buttonText="Join Class"
             imageSrc="/priest-with-children-for-baptism.jpeg"
             imageAlt="Children in catechism class"
             meetingTime={
-              "Saturdays — 4:00 PM to 6:00 PM; Sundays — 3:00 PM to 5:00 PM"
+              "Saturdays — 4:00 PM to 6:00 PM;\n Sundays — 3:00 PM to 5:00 PM"
             }
           />
 
@@ -53,16 +53,16 @@ export default function ParishActivitiesPage() {
             title="Confession"
             description="The sacrament of reconciliation is available weekly and by arrangement. Priests are available to hear confessions after Saturday Mass and upon request."
             buttonText="Request Appointment"
-            imageSrc="/priest-with-altar-boys.jpeg"
+            imageSrc="/picture-confession.jpg"
             imageAlt="Confession / pastoral care"
             meetingTime={"Every Saturday after Mass; also available on request"}
           />
 
           <ContentCard
             title="Benediction & Adoration"
-            description="A time of Eucharistic adoration and benediction to deepen prayer life and parish devotion."
+            description="A time of Eucharistic Adoration and Benediction to deepen prayer life and parish devotion - A moment to be with the Lord and spend time in His presence."
             buttonText="Join Adoration"
-            imageSrc="/priest-with-children.jpeg"
+            imageSrc="/picture-monstrance.jpg"
             imageAlt="Adoration and benediction"
             meetingTime={"Sundays — 5:00 PM to 6:00 PM"}
           />
