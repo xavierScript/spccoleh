@@ -1,5 +1,18 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Daily Mass Readings",
+  description:
+    "Access daily Catholic Mass readings from Universalis for St. Peter's Catholic Chaplaincy, Oleh. Follow the liturgical calendar with readings for Africa/Nigeria.",
+  openGraph: {
+    title: "Daily Mass Readings - SPCC Oleh",
+    description:
+      "Daily Catholic Mass readings and liturgy of the hours for St. Peter's Catholic Chaplaincy, Oleh from Universalis.",
+    type: "website",
+  },
+};
 
 export default function ReadingsPage() {
   return (

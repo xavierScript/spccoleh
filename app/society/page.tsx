@@ -1,6 +1,19 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContentCard from "../components/ContentCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Church Societies",
+  description:
+    "Explore church societies at St. Peter's Catholic Chaplaincy, Oleh: Catholic Women Organisation (CWO), Catholic Men Organisation (CMO), Choir, Legion of Mary, and more.",
+  openGraph: {
+    title: "Church Societies - SPCC Oleh",
+    description:
+      "Get involved with CWO, CMO, Altar Servers, Choir, Legion of Mary, and other active societies at St. Peter's Catholic Chaplaincy, Oleh.",
+    type: "website",
+  },
+};
 
 export default function SocietyPage() {
   return (

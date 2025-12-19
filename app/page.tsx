@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useLightbox } from "./components/LightboxProvider";
+import Script from "next/script";
 
 const bibleVersions = [
   {
@@ -68,8 +69,34 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    name: "St. Peter's Catholic Chaplaincy, Oleh",
+    alternateName: "SPCC Oleh",
+    description:
+      "Catholic chaplaincy serving students and staff at Delta State University, Oleh Campus",
+    url: "https://spccoleh.com.ng",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Oleh",
+      addressRegion: "Delta State",
+      addressCountry: "NG",
+    },
+    telephone: "+234-803-234-2601",
+    email: "info@spcc-oleh.org",
+    sameAs: [
+      // Add social media links when available
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F5F5]">
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Header />
 
       <main className="px-4 py-6 space-y-6">
