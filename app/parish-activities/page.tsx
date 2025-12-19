@@ -21,9 +21,9 @@ export default function ParishActivitiesPage() {
           <ContentCard
             title="Daily Mass"
             description="Daily Mass is offered throughout the week at scheduled times; all are welcome to attend and receive the Eucharist."
-            buttonText="Contact Office"
-            imageSrc="/priest-with-altar-boys.jpeg"
-            imageAlt="Priest serving mass"
+            buttonText="Attend Mass"
+            imageSrc="/priests-consecrating.jpg"
+            imageAlt="Priests consecrating the Eucharist"
             meetingTime={
               "Mondays, Wednesdays, Fridays — 5:00 PM\nTuesdays, Thursdays, Saturdays — 6:30 AM\nSundays — 6:00 AM and 7:00 AM (when school is in session) otherwise 6:30 AM"
             }
@@ -71,7 +71,7 @@ export default function ParishActivitiesPage() {
             title="Parish Office Hours"
             description="The parish office is open for enquiries, registrations and pastoral support during the hours below."
             buttonText="Visit Office"
-            imageSrc="/priest-with-nfcs-boys.jpeg"
+            imageSrc="/office-hours.webp"
             imageAlt="Parish office"
             meetingTime={
               "Tuesdays, Wednesdays, Thursdays — 9:00 AM to 12:00 PM"

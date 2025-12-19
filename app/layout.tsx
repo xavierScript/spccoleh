@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { LightboxProvider } from "./components/LightboxProvider";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
@@ -20,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunitoSans.variable} antialiased`}>{children}</body>
+      <head>
+        {/* Favicon: St. Peter logo in public folder (space encoded) */}
+        <link rel="icon" href="/icon-st%20peter.png" />
+      </head>
+      <body className={`${nunitoSans.variable} antialiased`}>
+        <LightboxProvider>{children}</LightboxProvider>
+      </body>
     </html>
   );
 }

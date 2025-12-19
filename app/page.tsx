@@ -8,6 +8,7 @@ import StationsSection from "./components/StationsSection";
 import Footer from "./components/Footer";
 import Image from "next/image";
 import { useState } from "react";
+import { useLightbox } from "./components/LightboxProvider";
 
 const bibleVersions = [
   {
@@ -30,6 +31,8 @@ const bibleVersions = [
 
 export default function Home() {
   const [showBibleOptions, setShowBibleOptions] = useState(false);
+  const { openLightbox } = useLightbox();
+
   return (
     <div className="min-h-screen bg-[#F5F5F5]">
       <Header />
@@ -111,14 +114,36 @@ export default function Home() {
           </section>
 
           {/* Image */}
-          <div className="relative w-full h-[250px] rounded-lg overflow-hidden">
+          <button
+            onClick={() => openLightbox("/picture-with-bible.jpg", "Bible")}
+            className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 cursor-pointer hover:opacity-90 transition-opacity group"
+          >
             <Image
               src="/picture-with-bible.jpg"
               alt="Bible"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-          </div>
+            {/* Overlay hint */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full p-3">
+                <svg
+                  className="w-6 h-6 text-[#441A05]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                  />
+                </svg>
+              </div>
+            </div>
+          </button>
         </div>
 
         <ContentCard
