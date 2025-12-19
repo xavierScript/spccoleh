@@ -71,7 +71,7 @@ const cmoExcos = [
   {
     name: "Mr. Osugba",
     position: "President",
-    image: "/exco-placeholder.jpg",
+    image: "/cmo-president.png",
   },
   {
     name: "Mr. Ekwughe Benjamin",
@@ -645,8 +645,9 @@ export default function AboutPage() {
 
             {/* CMO Executives */}
             <ExcoTextList
-              excos={cmoExcos}
+              excos={cmoExcos.slice(1)}
               title="Catholic Men Organisation (CMO)"
+              presidentWithImage={cmoExcos[0]}
             />
 
             {/* NFCS Executives */}
