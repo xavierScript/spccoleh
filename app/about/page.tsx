@@ -572,7 +572,7 @@ export default function AboutPage() {
     },
     {
       name: "Rev. Fr. Cyril Basikoro",
-      position: "Chaplain, St. Peter's Catholic Chaplaincy, Oleh Campus",
+      position: "Chaplain: St. Peter's Catholic Chaplaincy, Oleh Campus",
       image: "/parish-priest-on-mic.jpg",
     },
   ];
