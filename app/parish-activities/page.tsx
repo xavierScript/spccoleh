@@ -52,7 +52,7 @@ export default function ParishActivitiesPage() {
           <ContentCard
             title="Confession"
             description="The sacrament of reconciliation is available weekly and by arrangement. Priests are available to hear confessions after Saturday Mass and upon request."
-            buttonText="Request Appointment"
+            buttonText="Go for the Sacraments"
             imageSrc="/picture-confession.jpg"
             imageAlt="Confession / pastoral care"
             meetingTime={"Every Saturday after Mass; also available on request"}
@@ -61,7 +61,7 @@ export default function ParishActivitiesPage() {
           <ContentCard
             title="Benediction & Adoration"
             description="A time of Eucharistic Adoration and Benediction to deepen prayer life and parish devotion - A moment to be with the Lord and spend time in His presence."
-            buttonText="Join Adoration"
+            buttonText="Come, Let us Adore"
             imageSrc="/picture-monstrance.jpg"
             imageAlt="Adoration and benediction"
             meetingTime={"Sundays — 5:00 PM to 6:00 PM"}
@@ -70,7 +70,7 @@ export default function ParishActivitiesPage() {
           <ContentCard
             title="Parish Office Hours"
             description="The parish office is open for enquiries, registrations and pastoral support during the hours below."
-            buttonText="Visit Office"
+            buttonText="See the Priest"
             imageSrc="/office-hours.webp"
             imageAlt="Parish office"
             meetingTime={
