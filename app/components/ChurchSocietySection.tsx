@@ -6,6 +6,10 @@ interface SocietyItem {
   meetingTime: string;
 }
 
+interface ChurchSocietySectionProps {
+  shouldShake?: boolean;
+}
+
 const societies: SocietyItem[] = [
   {
     title: "CHOIR",
@@ -27,7 +31,9 @@ const societies: SocietyItem[] = [
   },
 ];
 
-export default function ChurchSocietySection() {
+export default function ChurchSocietySection({
+  shouldShake = false,
+}: ChurchSocietySectionProps) {
   return (
     <section className="rounded-lg">
       <h3 className="text-[#441A05] font-bold text-xl mb-6 text-center">
@@ -60,7 +66,9 @@ export default function ChurchSocietySection() {
       <div className="mt-8 flex justify-end">
         <Link
           href="/society"
-          className="bg-[#441A05] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block"
+          className={`bg-[#441A05] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block ${
+            shouldShake ? "shake-button" : ""
+          }`}
         >
           See more
         </Link>

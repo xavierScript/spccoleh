@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-export default function AboutSection() {
+interface AboutSectionProps {
+  shouldShake?: boolean;
+}
+
+export default function AboutSection({
+  shouldShake = false,
+}: AboutSectionProps) {
   return (
     <section className="bg-[#441A05] rounded-lg p-6 text-white mt-6 mb-12">
       {/* Centered heading */}
@@ -19,7 +25,9 @@ export default function AboutSection() {
       <div className="flex justify-end">
         <Link
           href="/about"
-          className="bg-white text-[#441A05] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#441A05] hover:text-white hover:ring-2 hover:ring-white transition-all duration-300 inline-block"
+          className={`bg-white text-[#441A05] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#441A05] hover:text-white hover:ring-2 hover:ring-white transition-all duration-300 inline-block ${
+            shouldShake ? "shake-button" : ""
+          }`}
         >
           Read more
         </Link>

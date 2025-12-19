@@ -13,6 +13,7 @@ interface ContentCardProps {
   imageSrc: string;
   imageAlt: string;
   meetingTime?: string;
+  shouldShake?: boolean;
 }
 
 export default function ContentCard({
@@ -24,8 +25,13 @@ export default function ContentCard({
   imageSrc,
   imageAlt,
   meetingTime,
+  shouldShake = false,
 }: ContentCardProps) {
   const { openLightbox } = useLightbox();
+
+  const buttonClasses = `bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block text-center ${
+    shouldShake ? "shake-button" : ""
+  }`;
 
   return (
     <div className="space-y-4 mb-12">
@@ -57,22 +63,17 @@ export default function ContentCard({
               href={buttonHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block text-center"
+              className={buttonClasses}
             >
               {buttonText}
             </a>
           ) : (
-            <Link
-              href={buttonHref}
-              className="bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block text-center"
-            >
+            <Link href={buttonHref} className={buttonClasses}>
               {buttonText}
             </Link>
           )
         ) : (
-          <button className="bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300">
-            {buttonText}
-          </button>
+          <button className={buttonClasses}>{buttonText}</button>
         )}
       </section>
 

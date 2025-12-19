@@ -3,7 +3,13 @@
 import Image from "next/image";
 import { useLightbox } from "./LightboxProvider";
 
-export default function StationsSection() {
+interface StationsSectionProps {
+  shouldShake?: boolean;
+}
+
+export default function StationsSection({
+  shouldShake = false,
+}: StationsSectionProps) {
   const { openLightbox } = useLightbox();
 
   return (
@@ -21,7 +27,9 @@ export default function StationsSection() {
           href="https://mycatholic.life/catholic-prayers/stations-of-the-cross/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300"
+          className={`inline-block bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 ${
+            shouldShake ? "shake-button" : ""
+          }`}
         >
           See more
         </a>

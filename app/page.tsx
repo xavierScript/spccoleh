@@ -7,7 +7,7 @@ import ChurchSocietySection from "./components/ChurchSocietySection";
 import StationsSection from "./components/StationsSection";
 import Footer from "./components/Footer";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLightbox } from "./components/LightboxProvider";
 
 const bibleVersions = [
@@ -32,35 +32,95 @@ const bibleVersions = [
 export default function Home() {
   const [showBibleOptions, setShowBibleOptions] = useState(false);
   const { openLightbox } = useLightbox();
+  const [shakeButtons, setShakeButtons] = useState<Set<number>>(new Set());
+  const buttonRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = buttonRefs.current.indexOf(
+            entry.target as HTMLDivElement
+          );
+          if (index !== -1 && entry.isIntersecting) {
+            setShakeButtons((prev) => new Set(prev).add(index));
+            // Stop shaking after animation completes
+            setTimeout(() => {
+              setShakeButtons((prev) => {
+                const newSet = new Set(prev);
+                newSet.delete(index);
+                return newSet;
+              });
+            }, 1000);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "-50px",
+      }
+    );
+
+    buttonRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F5F5F5]">
       <Header />
 
       <main className="px-4 py-6 space-y-6">
-        <AboutSection />
+        <div
+          ref={(el) => {
+            buttonRefs.current[0] = el;
+          }}
+        >
+          <AboutSection shouldShake={shakeButtons.has(0)} />
+        </div>
 
-        <ContentCard
-          title="Parish Activities"
-          subtitle="OUR PROGRAM"
-          description="Discover the variety of activities organized at St. Peter's Parish. Join us and be part of our vibrant parish life."
-          buttonText="See more"
-          buttonHref="/parish-activities"
-          imageSrc="/picture-missal.jpg"
-          imageAlt="Parish Activities"
-        />
+        <div
+          ref={(el) => {
+            buttonRefs.current[1] = el;
+          }}
+        >
+          <ContentCard
+            title="Parish Activities"
+            subtitle="OUR PROGRAM"
+            description="Discover the variety of activities organized at St. Peter's Parish. Join us and be part of our vibrant parish life."
+            buttonText="See more"
+            buttonHref="/parish-activities"
+            imageSrc="/picture-missal.jpg"
+            imageAlt="Parish Activities"
+            shouldShake={shakeButtons.has(1)}
+          />
+        </div>
 
-        <ContentCard
-          title="Daily Readings"
-          description="Access the daily scripture readings to guide your prayer and reflection. Stay connected with the Word of God every day."
-          buttonText="Today's Readings"
-          buttonHref="/readings"
-          imageSrc="/picture-lectionary.jpg"
-          imageAlt="Daily Readings"
-        />
+        <div
+          ref={(el) => {
+            buttonRefs.current[2] = el;
+          }}
+        >
+          <ContentCard
+            title="Daily Readings"
+            description="Access the daily scripture readings to guide your prayer and reflection. Stay connected with the Word of God every day."
+            buttonText="Today's Readings"
+            buttonHref="/readings"
+            imageSrc="/picture-lectionary.jpg"
+            imageAlt="Daily Readings"
+            shouldShake={shakeButtons.has(2)}
+          />
+        </div>
         {/* Bible Online with Selector */}
         <div className="space-y-4 mb-12">
-          <section className="rounded-lg">
+          <div
+            ref={(el) => {
+              buttonRefs.current[3] = el;
+            }}
+            className="rounded-lg"
+          >
             <h3 className="text-[#441A05] font-bold text-xl mb-3 text-center">
               Bible Online
             </h3>
@@ -70,7 +130,9 @@ export default function Home() {
             </p>
             <button
               onClick={() => setShowBibleOptions(!showBibleOptions)}
-              className="bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300"
+              className={`bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 ${
+                shakeButtons.has(3) ? "shake-button" : ""
+              }`}
             >
               {showBibleOptions ? "Hide Options" : "Read the Bible"}
             </button>
@@ -111,7 +173,7 @@ export default function Home() {
                 </div>
               </div>
             )}
-          </section>
+          </div>
 
           {/* Image */}
           <button
@@ -146,18 +208,37 @@ export default function Home() {
           </button>
         </div>
 
-        <ContentCard
-          title="Catechism Corner"
-          description="Learn and deepen your understanding of Catholic teachings. Explore lessons, stories, and guidance to strengthen your faith."
-          buttonText="Learn about the Faith"
-          buttonHref="https://usccb.cld.bz/Catechism-of-the-Catholic-Church2/4/"
-          imageSrc="/picture-bible.jpg"
-          imageAlt="Catechism Corner"
-        />
+        <div
+          ref={(el) => {
+            buttonRefs.current[4] = el;
+          }}
+        >
+          <ContentCard
+            title="Catechism Corner"
+            description="Learn and deepen your understanding of Catholic teachings. Explore lessons, stories, and guidance to strengthen your faith."
+            buttonText="Learn about the Faith"
+            buttonHref="https://usccb.cld.bz/Catechism-of-the-Catholic-Church2/4/"
+            imageSrc="/picture-bible.jpg"
+            imageAlt="Catechism Corner"
+            shouldShake={shakeButtons.has(4)}
+          />
+        </div>
 
-        <ChurchSocietySection />
+        <div
+          ref={(el) => {
+            buttonRefs.current[5] = el;
+          }}
+        >
+          <ChurchSocietySection shouldShake={shakeButtons.has(5)} />
+        </div>
 
-        <StationsSection />
+        <div
+          ref={(el) => {
+            buttonRefs.current[6] = el;
+          }}
+        >
+          <StationsSection shouldShake={shakeButtons.has(6)} />
+        </div>
       </main>
 
       <Footer />
