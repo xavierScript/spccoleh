@@ -13,11 +13,13 @@ export default function Footer() {
               width={32}
               height={32}
             />
-            <span className="font-bold text-base text-lg">SPCC, Oleh</span>
+            <span className="font-bold text-base text-lg">
+              SPCC, Oleh Campus
+            </span>
           </div>
           <p className="text-xs opacity-90">
             {" "}
-            Copyright © {new Date().getFullYear()} SPCC, Oleh
+            Copyright © {new Date().getFullYear()} SPCC, Oleh Campus
           </p>
           <p className="text-xs opacity-90">All rights reserved</p>
         </div>
