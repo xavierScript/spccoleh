@@ -55,6 +55,16 @@ const parishLaityExcos = [
     position: "President",
     image: "/laity-chairman.jpeg",
   },
+  {
+    name: "Inside the Church",
+    position: "Members of the Laity",
+    image: "/parish-laity1.jpg",
+  },
+  {
+    name: "Inside the Church",
+    position: "Members of the Laity",
+    image: "/parish-laity2.jpg",
+  },
 ];
 
 const cmoExcos = [
@@ -474,30 +484,33 @@ export default function AboutPage() {
     },
     { src: "/priest-with-children.jpeg", alt: "Priest with Children" },
     { src: "/priest-with-altar-boys.jpeg", alt: "Priest with Altar Boys" },
-    { src: "/priest-with-laity.jpg", alt: "Priest with Parish Laity" },
-    { src: "/priest-with-family.jpg", alt: "Priest with Family" },
+    { src: "/priest-with-laity.jpg", alt: "Priest with Parish Members" },
+    {
+      src: "/priest-with-family.jpg",
+      alt: "Father Cyril's 10th Priestly Anniversary",
+    },
     { src: "/priest-with-servers.jpg", alt: "Priest with Altar Servers" },
     {
       src: "/priest-with-servers-sacristy.jpg",
       alt: "Priest with Servers in Sacristy",
     },
-    { src: "/priest-alone.jpg", alt: "Parish Priest" },
-    { src: "/newly-wedded-couples.jpeg", alt: "Newly Wedded Couples" },
-    { src: "/parish-cwo-sitting.jpg", alt: "Parish CWO Members" },
+    { src: "/priest-alone.jpg", alt: "Chaplain: Rev. Fr. Cyril Basikoro" },
+    { src: "/newly-wedded-couples.jpeg", alt: "Wedded Couples" },
+    { src: "/parish-cwo-sitting.jpg", alt: "CWO Members" },
     { src: "/parish-cwo-standing.jpg", alt: "CWO Members" },
     { src: "/parish-choir.jpg", alt: "Parish Choir" },
     { src: "/parish-hca.jpg", alt: "Holy Childhood Association" },
-    { src: "/priests-sitting.jpg", alt: "Priests at Parish" },
-    { src: "/priests-sitting2.jpg", alt: "Clergy Members" },
-    { src: "/priests-consecrating.jpg", alt: "Priests Consecrating" },
-    { src: "/priets-incensing.jpg", alt: "Priests Incensing" },
-    { src: "/priets-incensing2.jpg", alt: "Incensing at Mass" },
-    { src: "/servers-acolytes.jpg", alt: "Altar Servers" },
+    { src: "/priests-sitting.jpg", alt: "Priests during Mass" },
+    { src: "/priests-sitting2.jpg", alt: "Priests during Mass" },
+    { src: "/priests-consecrating.jpg", alt: "Consecration" },
+    { src: "/priets-incensing.jpg", alt: "Consecration" },
+    { src: "/priets-incensing2.jpg", alt: "Consecration" },
+    { src: "/servers-acolytes.jpg", alt: "Presentation of Gifts" },
     { src: "/servers-processing.jpg", alt: "Servers Processing" },
     { src: "/servers-processing2.jpg", alt: "Servers Processing" },
     {
       src: "/servers-receiving-communion.jpg",
-      alt: "Servers Receiving Communion",
+      alt: "Communion",
     },
   ];
 
@@ -538,17 +551,17 @@ export default function AboutPage() {
     },
     {
       name: "Bishop John Okeoghene Afareha",
-      position: "Emeritus Bishop of Warri Diocese",
+      position: "Emeritus Bishop of the Catholic Diocese of Warri",
       image: "/bishop-afareha.jpg",
     },
     {
       name: "Bishop Anthony Ovayero Ewherido",
-      position: "Bishop of Warri Diocese",
+      position: "Bishop of the Catholic Diocese of Warri",
       image: "/bishop-ewherido.jpeg",
     },
     {
       name: "Bishop John Okeoghene Afareha with Bishop Anthony Ovayero Ewherido",
-      position: "Emeritus Bishop and Bishop of Warri Diocese",
+      position: "Emeritus Bishop and Bishop of the Catholic Diocese of Warri",
       image: "/bishops-afareha-with-ewherido.jpeg",
     },
 
