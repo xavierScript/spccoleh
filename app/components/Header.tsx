@@ -32,7 +32,7 @@ export default function Header() {
         />
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-        {/* Top bar - Mobile/Tablet */}
+        {/* Top bar - Mobile/Tablet only */}
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-[500] lg:hidden">
           {/* Left icon */}
           <Image
@@ -63,7 +63,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex absolute top-0 left-0 right-0 z-[500] bg-gradient-to-b from-black/60 to-transparent">
+        <nav className="hidden lg:flex absolute top-0 left-0 right-0 z-[500] bg-gradient-to-b from-black/50 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
             {/* Left icon */}
             <Image
