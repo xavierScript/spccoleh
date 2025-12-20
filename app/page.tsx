@@ -160,7 +160,7 @@ export default function Home() {
               </p>
               <button
                 onClick={() => setShowBibleOptions(!showBibleOptions)}
-                className={`bg-[#441A05] text-white px-5 py-2 lg:px-10 lg:py-4 rounded-full text-sm lg:text-xl font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 ${
+                className={`bg-[#441A05] text-white px-5 py-2 lg:px-10 lg:py-4 lg:min-w-[450px] rounded-full text-sm lg:text-xl font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 ${
                   shakeButtons.has(3) ? "shake-button" : ""
                 }`}
               >

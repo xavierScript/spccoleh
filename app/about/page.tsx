@@ -296,7 +296,7 @@ function ExcoCarousel({
                 <div key={index} className="text-center">
                   <button
                     onClick={() => openLightbox(exco.image, exco.name)}
-                    className="relative w-56 h-56 lg:w-64 lg:h-64 mx-auto mb-4 rounded-md overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
+                    className="relative w-56 h-56 lg:w-64 lg:h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
                     aria-label={`View ${exco.name} photo`}
                   >
                     <Image
@@ -325,7 +325,7 @@ function ExcoCarousel({
                     excos[currentIndex].name
                   )
                 }
-                className="relative w-56 h-56 lg:w-64 lg:h-64 mx-auto mb-4 rounded-md overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
+                className="relative w-56 h-56 lg:w-64 lg:h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
                 aria-label={`View ${excos[currentIndex].name} photo`}
               >
                 <Image
@@ -426,7 +426,7 @@ function ExcoTextList({
               onClick={() =>
                 openLightbox(presidentWithImage.image, presidentWithImage.name)
               }
-              className="relative w-48 h-48 lg:w-56 lg:h-56 mx-auto mb-4 rounded-md overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
+              className="relative w-48 h-48 lg:w-56 lg:h-56 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
               aria-label={`View ${presidentWithImage.name} photo`}
             >
               <Image

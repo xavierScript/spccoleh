@@ -120,7 +120,7 @@ export default function ContentCard({
         {/* Image Column */}
         <button
           onClick={() => openLightbox(imageSrc, imageAlt)}
-          className={`relative w-full h-full cursor-pointer hover:opacity-90 transition-opacity group ${
+          className={`relative w-full h-full cursor-pointer hover:opacity-90 transition-opacity group rounded-lg overflow-hidden bg-gray-100 ${
             isReversed ? "lg:order-2" : "lg:order-1"
           }`}
         >
