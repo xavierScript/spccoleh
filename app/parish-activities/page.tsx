@@ -20,17 +20,21 @@ export default function ParishActivitiesPage() {
     <div className="min-h-screen bg-[#F5F5F5]">
       <Header />
 
-      <main className="px-4 py-12 max-w-6xl mx-auto space-y-8 lg:space-y-12">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Parish Activities</h1>
-          <p className="text-base text-gray-700 leading-relaxed">
+      <main className="px-4 py-12 lg:px-0 lg:py-0">
+        {/* Page Header - Full Width on Desktop */}
+        <div className="max-w-3xl mx-auto mb-8 lg:max-w-7xl lg:px-20 lg:py-16 lg:mb-0">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 text-[#441A05]">
+            Parish Activities
+          </h1>
+          <p className="text-base lg:text-2xl text-gray-700 leading-relaxed">
             Our parish runs a variety of activities, Student programmes, and
             Liturgical celebrations. See the regular schedule below and contact
             the Parish Office to get involved.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Activity Cards - Mobile: Grid, Desktop: Full Width Alternating */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-1 lg:gap-0">
           <ContentCard
             title="Daily Mass"
             description="Daily Mass is offered throughout the week at scheduled times; all are welcome to attend and receive the Eucharist."
@@ -40,6 +44,7 @@ export default function ParishActivitiesPage() {
             meetingTime={
               "Mondays, Wednesdays, Fridays — 5:00 PM\nTuesdays, Thursdays, Saturdays — 6:30 AM\nSundays — 6:00 AM and 7:00 AM (when school is in session) otherwise 6:30 AM"
             }
+            isReversed={false}
           />
 
           <ContentCard
@@ -49,6 +54,7 @@ export default function ParishActivitiesPage() {
             imageSrc="/newly-wedded-couples.jpeg"
             imageAlt="Newly wedded couples"
             meetingTime={"Mondays, 6:00 PM — 7:00 PM"}
+            isReversed={true}
           />
 
           <ContentCard
@@ -60,6 +66,7 @@ export default function ParishActivitiesPage() {
             meetingTime={
               "Saturdays — 4:00 PM to 6:00 PM;\n Sundays — 3:00 PM to 5:00 PM"
             }
+            isReversed={false}
           />
 
           <ContentCard
@@ -69,6 +76,7 @@ export default function ParishActivitiesPage() {
             imageSrc="/picture-confession.jpg"
             imageAlt="Confession / pastoral care"
             meetingTime={"Every Saturday after Mass; also available on request"}
+            isReversed={true}
           />
 
           <ContentCard
@@ -78,6 +86,7 @@ export default function ParishActivitiesPage() {
             imageSrc="/picture-monstrance.jpg"
             imageAlt="Adoration and benediction"
             meetingTime={"Sundays — 5:00 PM to 6:00 PM"}
+            isReversed={false}
           />
 
           <ContentCard
@@ -89,6 +98,7 @@ export default function ParishActivitiesPage() {
             meetingTime={
               "Tuesdays, Wednesdays, Thursdays — 9:00 AM to 12:00 PM"
             }
+            isReversed={true}
           />
         </div>
       </main>

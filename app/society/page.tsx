@@ -20,17 +20,21 @@ export default function SocietyPage() {
     <div className="min-h-screen bg-[#F5F5F5]">
       <Header />
 
-      <main className="px-4 py-12 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4 text-[#441A05]">
-          Church Societies
-        </h1>
-        <p className="text-base text-gray-700 leading-relaxed mb-8">
-          Our societies foster spiritual growth, service and fellowship. Below
-          are the key groups active at St. Peter's Catholic Chaplaincy, Delta
-          State University, Oleh Campus.
-        </p>
+      <main className="px-4 py-12 lg:px-0 lg:py-0">
+        {/* Page Header - Full Width on Desktop */}
+        <div className="mb-8 lg:px-20 lg:py-16 lg:mb-0 lg:max-w-7xl lg:mx-auto">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 text-[#441A05]">
+            Church Societies
+          </h1>
+          <p className="text-base lg:text-2xl text-gray-700 leading-relaxed">
+            Our societies foster spiritual growth, service and fellowship. Below
+            are the key groups active at St. Peter's Catholic Chaplaincy, Delta
+            State University, Oleh Campus.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Society Cards - Mobile: Grid, Desktop: Full Width Alternating */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-1 lg:gap-0">
           <ContentCard
             title="Altar Servers"
             description="The Altar Servers assist during the celebration of Mass and other liturgical celebrations; with emphasis placed on learning the importance of service and participating actively in the Church's Sacred rituals."
@@ -38,6 +42,7 @@ export default function SocietyPage() {
             imageSrc="/priest-with-servers-sacristy.jpg"
             imageAlt="Altar servers"
             meetingTime="Every Saturday after the morning Mass and at 4:00 PM"
+            isReversed={false}
           />
 
           <ContentCard
@@ -47,6 +52,7 @@ export default function SocietyPage() {
             imageSrc="/picture-bible.jpg"
             imageAlt="Lay reader proclaiming the Word"
             meetingTime="Every Saturday at 4:30 PM (in the Church compound)"
+            isReversed={true}
           />
 
           <ContentCard
@@ -56,6 +62,7 @@ export default function SocietyPage() {
             imageSrc="/parish-choir.jpg"
             imageAlt="Choir singing"
             meetingTime="Every Tuesday, Thursday and Saturday at 4:00 PM"
+            isReversed={false}
           />
 
           <ContentCard
@@ -65,6 +72,7 @@ export default function SocietyPage() {
             imageSrc="/priest-with-nfcs1.jpeg"
             imageAlt="NFCS"
             meetingTime="Meeting Time: Every second Sunday after the Mass"
+            isReversed={true}
           />
 
           <ContentCard
@@ -74,6 +82,7 @@ export default function SocietyPage() {
             imageSrc="/legion-altar.jpg"
             imageAlt="Legion of Mary"
             meetingTime="Meeting Time: Every Sunday at 10:00 AM"
+            isReversed={false}
           />
 
           <ContentCard
@@ -83,6 +92,7 @@ export default function SocietyPage() {
             imageSrc="/parish-hca.jpg"
             imageAlt="Holy Childhood Association"
             meetingTime="Meeting Time: Every Sunday at 10:30 AM"
+            isReversed={true}
           />
 
           <ContentCard
@@ -92,6 +102,7 @@ export default function SocietyPage() {
             imageSrc="/parish-cwo-sitting.jpg"
             imageAlt="Catholic Women Organisation"
             meetingTime="Meeting Time: Second Sunday of every month after the Mass (10:00 AM)"
+            isReversed={false}
           />
 
           <ContentCard
@@ -101,6 +112,7 @@ export default function SocietyPage() {
             imageSrc="/cmo-logo.jpg"
             imageAlt="Catholic Men Organisation"
             meetingTime="Meeting Time: Second Saturday of every month after the Mass (10:00 AM)"
+            isReversed={true}
           />
 
           <ContentCard
@@ -110,6 +122,7 @@ export default function SocietyPage() {
             imageSrc="/dove-ccrn.jpg"
             imageAlt="Catholic Charismatic Renewal"
             meetingTime="Meeting Time: Every Sunday at 4:00 PM"
+            isReversed={false}
           />
         </div>
       </main>
