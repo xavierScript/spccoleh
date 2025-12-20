@@ -636,18 +636,17 @@ export default function AboutPage() {
           </h2>
 
           <div className="space-y-8">
-            {/* CWO Executives */}
-            <ExcoTextList
-              excos={cwoExcos.slice(1)}
-              title="Catholic Women Organisation (CWO)"
-              presidentWithImage={cwoExcos[0]}
-            />
-
             {/* CMO Executives */}
             <ExcoTextList
               excos={cmoExcos.slice(1)}
               title="Catholic Men Organisation (CMO)"
               presidentWithImage={cmoExcos[0]}
+            />
+            {/* CWO Executives */}
+            <ExcoTextList
+              excos={cwoExcos.slice(1)}
+              title="Catholic Women Organisation (CWO)"
+              presidentWithImage={cwoExcos[0]}
             />
 
             {/* NFCS Executives */}
