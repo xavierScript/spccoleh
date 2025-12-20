@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ReadingsPage() {
   return (
-    <div className="min-h-screen bg-[#F5F5F5]">
+    <div className="min-h-screen bg-white">
       <Header />
 
       <main className="px-4 py-12 max-w-6xl mx-auto">
