@@ -296,7 +296,7 @@ function ExcoCarousel({
                 <div key={index} className="text-center">
                   <button
                     onClick={() => openLightbox(exco.image, exco.name)}
-                    className="relative w-56 h-56 lg:w-64 lg:h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
+                    className="relative w-56 h-56 lg:w-72 lg:h-72 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
                     aria-label={`View ${exco.name} photo`}
                   >
                     <Image
@@ -304,7 +304,7 @@ function ExcoCarousel({
                       alt={exco.name}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 1024px) 224px, 256px"
+                      sizes="(max-width: 1024px) 224px, 288px"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </button>
@@ -325,7 +325,7 @@ function ExcoCarousel({
                     excos[currentIndex].name
                   )
                 }
-                className="relative w-56 h-56 lg:w-64 lg:h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
+                className="relative w-56 h-56 lg:w-72 lg:h-72 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
                 aria-label={`View ${excos[currentIndex].name} photo`}
               >
                 <Image
@@ -333,7 +333,7 @@ function ExcoCarousel({
                   alt={excos[currentIndex].name}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 224px, 256px"
+                  sizes="(max-width: 1024px) 224px, 288px"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </button>
@@ -426,7 +426,7 @@ function ExcoTextList({
               onClick={() =>
                 openLightbox(presidentWithImage.image, presidentWithImage.name)
               }
-              className="relative w-48 h-48 lg:w-56 lg:h-56 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
+              className="relative w-48 h-48 lg:w-64 lg:h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-90 transition-opacity group"
               aria-label={`View ${presidentWithImage.name} photo`}
             >
               <Image
@@ -434,11 +434,11 @@ function ExcoTextList({
                 alt={presidentWithImage.name}
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 192px, 224px"
+                sizes="(max-width: 1024px) 192px, 256px"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
             </button>
-            <h4 className="font-bold text-[#441A05] mb-1 text-lg">
+            <h4 className="font-bold text-[#441A05] mb-1 text-lg lg:text-xl">
               {presidentWithImage.name}
             </h4>
             <p className="text-sm text-gray-600">
@@ -581,154 +581,156 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <main className="px-4 py-12 max-w-4xl mx-auto lg:max-w-7xl lg:px-20 lg:py-16 space-y-12 lg:space-y-16">
-        {/* Hero Section */}
-        <div>
-          <h1 className="text-3xl font-bold mb-4 lg:text-5xl lg:mb-6 text-[#441A05] text-center">
-            About St. Peter&apos;s Catholic Chaplaincy, Oleh Campus
-          </h1>
-          <p className="text-base text-gray-700 leading-relaxed lg:text-lg max-w-3xl mx-auto">
-            A welcoming community committed to faith, service and fellowship
-            since 2015.
-          </p>
-        </div>
-
-        {/* History Section */}
-        <section className="rounded-lg lg:p-10">
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#441A05] mb-4 text-center">
-            History
-          </h2>
-          <p className="text-base text-gray-700 leading-relaxed lg:text-lg">
-            St. Peter&apos;s Catholic Chaplaincy, Oleh, was established in
-            February, 2015 by the then Bishop, Most Revd. John Okeoghene
-            Afareha, to serve the spiritual needs of the Catholic faithful
-            within the community with the first Parish Priest being Rev. Fr.
-            Israel Inaede. Over the years, the Chaplaincy has grown into a place
-            of worship, unity, and spiritual nourishment, fostering strong bonds
-            among its members and promoting Catholic values.
-          </p>
-        </section>
-
-        {/* Our Faith Section - carousel */}
-        <section>
-          <ExcoCarousel excos={faithLeaders} title="Our Faith Leaders" />
-        </section>
-
-        {/* Our Mission */}
-        <div className="rounded-lg lg:p-8">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-[#441A05] text-center">
-            Our Mission
-          </h2>
-          <p className="text-base text-gray-700 leading-relaxed">
-            Our mission is to proclaim the Gospel of Christ, nurture spiritual
-            growth, and build a vibrant Catholic community rooted in faith,
-            service, and love. We strive to support our members through prayer,
-            sacraments, pastoral care and genuine community living; all geared
-            towards the salvation of souls and the advancement of God's Kingdom
-            in the Catholic Diocese of Warri.
-          </p>
-        </div>
-
-        {/* Organization Leadership */}
-        <section>
-          <h2 className="text-2xl lg:text-3xl font-bold mb-8 text-[#441A05] text-center">
-            Our Leadership
-          </h2>
-
-          <div className="space-y-8">
-            {/* CMO Executives */}
-            <ExcoTextList
-              excos={cmoExcos.slice(1)}
-              title="Catholic Men Organisation (CMO)"
-              presidentWithImage={cmoExcos[0]}
-            />
-            {/* CWO Executives */}
-            <ExcoTextList
-              excos={cwoExcos.slice(1)}
-              title="Catholic Women Organisation (CWO)"
-              presidentWithImage={cwoExcos[0]}
-            />
-
-            {/* NFCS Executives */}
-            <ExcoCarousel
-              excos={nfcsExcos}
-              title="NFCS DELSU Chapter Executives"
-            />
-            {/* Parish Laity */}
-            <ExcoCarousel excos={parishLaityExcos} title="Parish Laity" />
-          </div>
-        </section>
-
-        {/* Community & Activities (moved after Leadership) */}
-        <section className="mt-8">
-          <div className="rounded-lg lg:p-8">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-[#441A05] text-center">
-              Community & Activities
-            </h2>
-            <p className="text-base text-gray-700 leading-relaxed">
-              The Chaplaincy organizes regular Masses, Bible Study Sessions,
-              Catechism Classes, and various Church Society Meetings. Through
-              these activities, members are encouraged and their faith deepened
-              to fulfill the Kingdom purpose. Active participation in the life
-              of the church is paramount.
+      <main className="px-4 py-12 lg:px-8 lg:py-0">
+        <div className="max-w-3xl mx-auto lg:max-w-7xl lg:px-20 lg:py-16 space-y-12 lg:space-y-16">
+          {/* Hero Section */}
+          <div>
+            <h1 className="text-3xl font-bold mb-4 lg:text-5xl lg:mb-6 text-[#441A05] text-center">
+              About St. Peter&apos;s Catholic Chaplaincy, Oleh Campus
+            </h1>
+            <p className="text-base text-gray-700 leading-relaxed lg:text-2xl max-w-3xl mx-auto">
+              A welcoming community committed to faith, service and fellowship
+              since 2015.
             </p>
           </div>
-        </section>
 
-        {/* Photo Gallery Section - carousel */}
-        <section>
-          <ExcoCarousel
-            excos={galleryExcos}
-            title="Our Community in Pictures"
-          />
-        </section>
+          {/* History Section */}
+          <section className="rounded-lg lg:p-10">
+            <h2 className="text-2xl lg:text-3xl font-bold text-[#441A05] mb-4 text-center">
+              History
+            </h2>
+            <p className="text-base text-gray-700 leading-relaxed lg:text-2xl">
+              St. Peter&apos;s Catholic Chaplaincy, Oleh, was established in
+              February, 2015 by the then Bishop, Most Revd. John Okeoghene
+              Afareha, to serve the spiritual needs of the Catholic faithful
+              within the community with the first Parish Priest being Rev. Fr.
+              Israel Inaede. Over the years, the Chaplaincy has grown into a
+              place of worship, unity, and spiritual nourishment, fostering
+              strong bonds among its members and promoting Catholic values.
+            </p>
+          </section>
 
-        {/* Get Involved */}
-        <div className="bg-gradient-to-r from-[#441A05] to-[#2A1003] rounded-lg shadow-xl p-8 lg:p-12 text-white text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-            Join Our Community
-          </h2>
-          <p className="text-base lg:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
-            Everyone is welcome to join and contribute to the life of the
-            Chaplaincy. Whether through volunteering, joining a Church Society,
-            or participating in programmes that have to do with the life of the
-            Church; there are many ways to serve and grow together as one family
-            in Christ.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/parish-activities"
-              className="bg-white text-[#441A05] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
-            >
-              View Activities
-            </a>
-            <a
-              href="/society"
-              className="bg-transparent text-white border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#441A05] transition-colors inline-block"
-            >
-              Join a Society
-            </a>
+          {/* Our Faith Section - carousel */}
+          <section>
+            <ExcoCarousel excos={faithLeaders} title="Our Faith Leaders" />
+          </section>
+
+          {/* Our Mission */}
+          <div className="rounded-lg lg:p-8">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-[#441A05] text-center">
+              Our Mission
+            </h2>
+            <p className="text-base text-gray-700 leading-relaxed lg:text-2xl">
+              Our mission is to proclaim the Gospel of Christ, nurture spiritual
+              growth, and build a vibrant Catholic community rooted in faith,
+              service, and love. We strive to support our members through
+              prayer, sacraments, pastoral care and genuine community living;
+              all geared towards the salvation of souls and the advancement of
+              God's Kingdom in the Catholic Diocese of Warri.
+            </p>
           </div>
-        </div>
 
-        {/* Location Map */}
-        <section>
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#441A05] mb-6 text-center">
-            Find Us
-          </h2>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8087563896845!2d6.202815!3d5.587556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ad7d7f8e6f5d%3A0x1f1e2b3c4d5e6f7a!2sOleh%2C%20Delta%20State%2C%20Nigeria!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-              width="100%"
-              height="450"
-              className="border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="St. Peter's Catholic Chaplaincy Location"
+          {/* Organization Leadership */}
+          <section>
+            <h2 className="text-2xl lg:text-3xl font-bold mb-8 text-[#441A05] text-center">
+              Our Leadership
+            </h2>
+
+            <div className="space-y-8">
+              {/* CMO Executives */}
+              <ExcoTextList
+                excos={cmoExcos.slice(1)}
+                title="Catholic Men Organisation (CMO)"
+                presidentWithImage={cmoExcos[0]}
+              />
+              {/* CWO Executives */}
+              <ExcoTextList
+                excos={cwoExcos.slice(1)}
+                title="Catholic Women Organisation (CWO)"
+                presidentWithImage={cwoExcos[0]}
+              />
+
+              {/* NFCS Executives */}
+              <ExcoCarousel
+                excos={nfcsExcos}
+                title="NFCS DELSU Chapter Executives"
+              />
+              {/* Parish Laity */}
+              <ExcoCarousel excos={parishLaityExcos} title="Parish Laity" />
+            </div>
+          </section>
+
+          {/* Community & Activities (moved after Leadership) */}
+          <section className="mt-8">
+            <div className="rounded-lg lg:p-8">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-[#441A05] text-center">
+                Community & Activities
+              </h2>
+              <p className="text-base text-gray-700 leading-relaxed lg:text-2xl">
+                The Chaplaincy organizes regular Masses, Bible Study Sessions,
+                Catechism Classes, and various Church Society Meetings. Through
+                these activities, members are encouraged and their faith
+                deepened to fulfill the Kingdom purpose. Active participation in
+                the life of the church is paramount.
+              </p>
+            </div>
+          </section>
+
+          {/* Photo Gallery Section - carousel */}
+          <section>
+            <ExcoCarousel
+              excos={galleryExcos}
+              title="Our Community in Pictures"
             />
+          </section>
+
+          {/* Get Involved */}
+          <div className="bg-gradient-to-r from-[#441A05] to-[#2A1003] rounded-lg shadow-xl p-8 lg:p-12 text-white text-center">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+              Join Our Community
+            </h2>
+            <p className="text-base lg:text-2xl leading-relaxed mb-6 max-w-2xl mx-auto">
+              Everyone is welcome to join and contribute to the life of the
+              Chaplaincy. Whether through volunteering, joining a Church
+              Society, or participating in programmes that have to do with the
+              life of the Church; there are many ways to serve and grow together
+              as one family in Christ.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/parish-activities"
+                className="bg-white text-[#441A05] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
+              >
+                View Activities
+              </a>
+              <a
+                href="/society"
+                className="bg-transparent text-white border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#441A05] transition-colors inline-block"
+              >
+                Join a Society
+              </a>
+            </div>
           </div>
-        </section>
+
+          {/* Location Map */}
+          <section>
+            <h2 className="text-2xl lg:text-3xl font-bold text-[#441A05] mb-6 text-center">
+              Find Us
+            </h2>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8087563896845!2d6.202815!3d5.587556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ad7d7f8e6f5d%3A0x1f1e2b3c4d5e6f7a!2sOleh%2C%20Delta%20State%2C%20Nigeria!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                width="100%"
+                height="450"
+                className="border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="St. Peter's Catholic Chaplaincy Location"
+              />
+            </div>
+          </section>
+        </div>
       </main>
 
       <Footer />
