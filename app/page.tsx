@@ -301,24 +301,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          {/* PDF Preview Image/Icon */}
-          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-[#441A05] to-[#6b2e0d] flex items-center justify-center">
-            <div className="text-center text-white p-8">
-              <svg
-                className="w-20 h-20 mx-auto mb-4 opacity-90"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" />
-                <path d="M14 2v6h6M10 15.5v-5M13 13.5v-3M7 14.5v-4" />
-              </svg>
-              <p className="text-lg font-bold">Plans and Programs</p>
-              <p className="text-sm opacity-80 mt-1">
-                Diocesan Year of Sacramental Life
-              </p>
-            </div>
-          </div>
         </div>
 
         <div
