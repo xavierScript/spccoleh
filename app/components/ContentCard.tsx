@@ -114,7 +114,9 @@ export default function ContentCard({
       </div>
 
       {/* Desktop Layout - Full Width Two Column */}
-      <div className={`hidden lg:grid lg:grid-cols-2 lg:min-h-[600px]`}>
+      <div
+        className={`hidden lg:grid lg:grid-cols-2 lg:min-h-[450px] lg:mb-16 lg:bg-white`}
+      >
         {/* Image Column */}
         <button
           onClick={() => openLightbox(imageSrc, imageAlt)}

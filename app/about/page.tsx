@@ -581,7 +581,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[#F5F5F5]">
       <Header />
 
-      <main className="px-4 py-12 max-w-6xl mx-auto lg:px-8 lg:py-16 space-y-12 lg:space-y-16">
+      <main className="px-4 py-12 max-w-4xl mx-auto lg:max-w-7xl lg:px-20 lg:py-16 space-y-12 lg:space-y-16">
         {/* Hero Section */}
         <div>
           <h1 className="text-3xl font-bold mb-4 lg:text-5xl lg:mb-6 text-[#441A05] text-center">

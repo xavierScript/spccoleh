@@ -36,7 +36,7 @@ export default function ChurchSocietySection({
 }: ChurchSocietySectionProps) {
   return (
     <section className="rounded-lg">
-      <h3 className="text-[#441A05] font-bold text-xl lg:text-2xl mb-6 lg:mb-8 text-center">
+      <h3 className="text-[#441A05] font-bold text-xl lg:text-4xl mb-6 lg:mb-8 text-center">
         Church Society Meetings
       </h3>
 
@@ -48,13 +48,13 @@ export default function ChurchSocietySection({
 
             {/* Society content */}
             <div>
-              <h4 className="text-[#441A05] font-bold text-base lg:text-lg mb-2">
+              <h4 className="text-[#441A05] font-bold text-lg lg:text-2xl mb-2">
                 {society.title}
               </h4>
-              <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
+              <p className="text-sm lg:text-xl text-gray-700 leading-relaxed">
                 {society.description}
               </p>
-              <p className="text-sm lg:text-base text-gray-500 italic mt-1">
+              <p className="text-sm lg:text-lg text-gray-500 italic mt-1">
                 Meeting Time: {society.meetingTime}
               </p>
             </div>
