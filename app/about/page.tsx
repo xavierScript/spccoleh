@@ -69,7 +69,7 @@ const parishLaityExcos = [
 
 const cmoExcos = [
   {
-    name: "Mr. Osugba",
+    name: "Mr. Osugba Amadi John",
     position: "President",
     image: "/cmo-president.png",
   },
