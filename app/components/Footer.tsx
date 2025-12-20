@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#441A05] text-white py-8 px-6">
+    <footer className="bg-[#441A05] text-white py-8 px-6 lg:text-base">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         {/* Left: Logo + Name + Copyright */}
         <div className="flex flex-col items-start gap-2">
@@ -13,21 +13,23 @@ export default function Footer() {
               width={32}
               height={32}
             />
-            <span className="font-bold text-base text-lg">
+            <span className="font-bold text-base lg:text-xl">
               SPCC, Oleh Campus
             </span>
           </div>
-          <p className="text-xs opacity-90">
+          <p className="text-xs lg:text-sm opacity-90">
             {" "}
             Copyright © {new Date().getFullYear()} SPCC, Oleh Campus
           </p>
-          <p className="text-xs opacity-90">All rights reserved</p>
+          <p className="text-xs lg:text-sm opacity-90">All rights reserved</p>
         </div>
 
         {/* Middle: Navigation */}
         <div className="flex flex-col">
-          <h4 className="font-semibold mb-3 text-base">Navigation</h4>
-          <ul className="space-y-2 text-sm">
+          <h4 className="font-semibold mb-3 text-base lg:text-lg">
+            Navigation
+          </h4>
+          <ul className="space-y-2 text-sm lg:text-base">
             <li className="group">
               <a
                 href="/"
@@ -78,8 +80,8 @@ export default function Footer() {
 
         {/* Right: Contact Us */}
         <div className="flex flex-col">
-          <h4 className="font-semibold mb-2">Contact Us</h4>
-          <ul className="space-y-1 text-sm opacity-90">
+          <h4 className="font-semibold mb-2 lg:text-lg">Contact Us</h4>
+          <ul className="space-y-1 text-sm lg:text-base opacity-90">
             <li>Phone no: 08032342601, 08036076656</li>
             <li>
               Address:{" "}
