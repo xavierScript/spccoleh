@@ -22,6 +22,27 @@ export default function Header() {
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
+  const [navHidden, setNavHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const current = window.scrollY || 0;
+      const last = lastScrollY.current || 0;
+
+      // hide when scrolling down past 80px, show when scrolling up
+      if (current > last && current > 80) {
+        setNavHidden(true);
+      } else if (current < last) {
+        setNavHidden(false);
+      }
+
+      lastScrollY.current = current;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     if (!headerRef.current) return;
@@ -88,7 +109,11 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex absolute top-0 left-0 right-0 z-[500] bg-gradient-to-b from-black/50 to-transparent">
+        <nav
+          className={`hidden lg:flex absolute top-0 left-0 right-0 z-[500] bg-gradient-to-b from-black/50 to-transparent transform transition-transform duration-300 ${
+            navHidden ? "-translate-y-full" : "translate-y-0"
+          }`}
+        >
           <div className="w-full max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
             {/* Left icon */}
             <Image

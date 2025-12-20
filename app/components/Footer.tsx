@@ -1,8 +1,34 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Footer() {
+  const ref = useRef<HTMLElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setInView(true);
+        });
+      },
+      { threshold: 0.05 }
+    );
+
+    obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <footer className="bg-[#441A05] text-white py-8 px-6 lg:text-base">
+    <footer
+      ref={ref}
+      className={`bg-[#441A05] text-white py-8 px-6 lg:text-base transform transition-all duration-700 ${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      }`}
+    >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         {/* Left: Logo + Name + Copyright */}
         <div className="flex flex-col items-start gap-2">

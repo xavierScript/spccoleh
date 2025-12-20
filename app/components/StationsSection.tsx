@@ -13,7 +13,7 @@ export default function StationsSection({
   const { openLightbox } = useLightbox();
 
   return (
-    <section className="mb-12">
+    <section className="mb-12 fade-on-view">
       <div className="mb-4">
         <h3 className="text-[#441A05] font-bold text-xl lg:text-4xl mb-3 lg:mb-6 text-center">
           Stations of the Cross

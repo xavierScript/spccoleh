@@ -63,3 +63,34 @@ body {
   will-change: transform;
   backface-visibility: hidden;
 }
+
+/* Section fade-on-view: initially hidden, animate up when .in-view is added */
+.fade-on-view {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 620ms ease, transform 620ms ease;
+  will-change: opacity, transform;
+}
+.fade-on-view.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer reveal uses same visible styles if needed */
+.footer-in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-zoom-out,
+  .fade-on-view,
+  .footer-in-view {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

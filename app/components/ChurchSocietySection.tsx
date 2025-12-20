@@ -35,7 +35,7 @@ export default function ChurchSocietySection({
   shouldShake = false,
 }: ChurchSocietySectionProps) {
   return (
-    <section className="rounded-lg">
+    <section className="rounded-lg fade-on-view">
       <h3 className="text-[#441A05] font-bold text-xl lg:text-4xl mb-6 lg:mb-8 text-center">
         Church Society Meetings
       </h3>

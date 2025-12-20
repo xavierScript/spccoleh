@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { LightboxProvider } from "./components/LightboxProvider";
+import ViewObserver from "./components/ViewObserver";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
@@ -87,7 +88,10 @@ export default function RootLayout({
         <link rel="icon" href="/icon-st%20peter.png" />
       </head>
       <body className={`${nunitoSans.variable} antialiased`}>
-        <LightboxProvider>{children}</LightboxProvider>
+        <LightboxProvider>
+          {children}
+          <ViewObserver />
+        </LightboxProvider>
       </body>
     </html>
   );
