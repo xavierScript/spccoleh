@@ -3,6 +3,15 @@
 import Image from "next/image";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
+
+const navigationLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Parish Activities", href: "/parish-activities" },
+  { label: "Church Societies", href: "/society" },
+  { label: "Daily Mass Readings", href: "/readings" },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +21,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative w-full h-[200px]">
+      <header className="relative w-full h-[200px] lg:h-screen">
         {/* Background image */}
         <Image
           src="/picture-gothic-cathedral.png"
@@ -23,8 +32,8 @@ export default function Header() {
         />
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-        {/* Top bar */}
-        <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-[500]">
+        {/* Top bar - Mobile/Tablet */}
+        <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-[500] lg:hidden">
           {/* Left icon */}
           <Image
             src="/icon-st peter.png"
@@ -53,9 +62,38 @@ export default function Header() {
           </button>
         </div>
 
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex absolute top-0 left-0 right-0 z-[500] bg-gradient-to-b from-black/60 to-transparent">
+          <div className="w-full max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
+            {/* Left icon */}
+            <Image
+              src="/icon-st peter.png"
+              alt="St. Peter Icon"
+              width={48}
+              height={48}
+              className="drop-shadow-lg"
+            />
+
+            {/* Navigation Links */}
+            <ul className="flex items-center gap-8">
+              {navigationLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white text-base font-semibold hover:text-white/80 transition-colors relative group py-2"
+                  >
+                    {link.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
         {/* Center title */}
         <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
-          <h1 className="text-white text-xl font-bold leading-tight">
+          <h1 className="text-white text-xl lg:text-5xl xl:text-6xl font-bold leading-tight lg:leading-tight drop-shadow-2xl">
             St. Peter&apos;s Catholic
             <br />
             Chaplaincy, Oleh Campus
