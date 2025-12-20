@@ -31,7 +31,7 @@ export default function StationsSection({
             shouldShake ? "shake-button" : ""
           }`}
         >
-          See more
+          Journey with Us
         </a>
       </div>
 
