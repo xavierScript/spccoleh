@@ -42,3 +42,24 @@ body {
 .shake-button {
   animation: shake-button 0.8s ease-in-out;
 }
+
+/* Header background zoom-out on initial page load */
+@keyframes zoom-out {
+  0% {
+    transform: scale(1.18);
+    transform-origin: center;
+  }
+  70% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+
+.animate-zoom-out {
+  animation: zoom-out 4s ease-out both;
+  will-change: transform;
+  backface-visibility: hidden;
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,19 +17,42 @@ const navigationLinks = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement | null>(null);
+  const [isImageInView, setIsImageInView] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    if (!headerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsImageInView(true);
+          } else {
+            setIsImageInView(false);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(headerRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <header className="relative w-full h-[200px] lg:h-screen">
-        {/* Background image */}
+      <header ref={headerRef} className="relative w-full h-[200px] lg:h-screen">
+        {/* Background image - animate whenever header is on screen */}
         <Image
           src="/picture-gothic-cathedral.png"
           alt="Cathedral"
           fill
-          className="object-cover"
+          className={`object-cover ${isImageInView ? "animate-zoom-out" : ""}`}
           priority
         />
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
