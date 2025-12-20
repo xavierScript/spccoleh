@@ -6,11 +6,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Church Societies",
   description:
-    "Explore church societies at St. Peter's Catholic Chaplaincy, Oleh: Catholic Women Organisation (CWO), Catholic Men Organisation (CMO), Choir, Legion of Mary, and more.",
+    "Explore church societies at St. Peter Catholic Chaplaincy, Oleh: Catholic Women Organisation (CWO), Catholic Men Organisation (CMO), Choir, Legion of Mary, and more.",
   openGraph: {
     title: "Church Societies - SPCC Oleh",
     description:
-      "Get involved with CWO, CMO, Altar Servers, Choir, Legion of Mary, and other active societies at St. Peter's Catholic Chaplaincy, Oleh.",
+      "Get involved with CWO, CMO, Altar Servers, Choir, Legion of Mary, and other active societies at St. Peter Catholic Chaplaincy, Oleh.",
     type: "website",
   },
 };
@@ -28,7 +28,7 @@ export default function SocietyPage() {
           </h1>
           <p className="text-base lg:text-2xl text-gray-700 leading-relaxed">
             Our societies foster spiritual growth, service and fellowship. Below
-            are the key groups active at St. Peter's Catholic Chaplaincy, Delta
+            are the key groups active at St. Peter Catholic Chaplaincy, Delta
             State University, Oleh Campus.
           </p>
         </div>

@@ -15,7 +15,7 @@ export default function AboutSection({
       </h2>
 
       <p className="text-sm lg:text-base leading-relaxed mb-4">
-        St. Peter's Catholic Chaplaincy is one of the Parish under the Catholic
+        St. Peter Catholic Chaplaincy is one of the Parish under the Catholic
         Diocese of Warri committed to building faith, service and fellowship
         with one another. We hold regular Masses alternated through the week
         days, with emphasis on the Word of God and the Eucharistic Worship. This

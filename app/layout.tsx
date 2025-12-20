@@ -12,11 +12,11 @@ const nunitoSans = Nunito_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "St. Peter's Catholic Chaplaincy, Oleh",
-    template: "%s | St. Peter's Catholic Chaplaincy, Oleh",
+    default: "St. Peter Catholic Chaplaincy, Oleh",
+    template: "%s | St. Peter Catholic Chaplaincy, Oleh",
   },
   description:
-    "Official website of St. Peter's Catholic Chaplaincy, Oleh Campus, Delta State University. Mass schedules, daily readings, church societies, parish activities, and spiritual resources for Catholic students and parishioners.",
+    "Official website of St. Peter Catholic Chaplaincy, Oleh Campus, Delta State University. Mass schedules, daily readings, church societies, parish activities, and spiritual resources for Catholic students and parishioners.",
   keywords: [
     "Catholic Church Oleh",
     "St Peter's Catholic Chaplaincy",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "NFCS DELSU",
     "Catholic Parish Activities",
   ],
-  authors: [{ name: "St. Peter's Catholic Chaplaincy, Oleh" }],
-  creator: "St. Peter's Catholic Chaplaincy, Oleh",
-  publisher: "St. Peter's Catholic Chaplaincy, Oleh",
+  authors: [{ name: "St. Peter Catholic Chaplaincy, Oleh" }],
+  creator: "St. Peter Catholic Chaplaincy, Oleh",
+  publisher: "St. Peter Catholic Chaplaincy, Oleh",
   metadataBase: new URL("https://spccoleh.com.ng"),
   alternates: {
     canonical: "/",
@@ -40,24 +40,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     url: "https://spcc-oleh.vercel.app",
-    siteName: "St. Peter's Catholic Chaplaincy, Oleh",
-    title: "St. Peter's Catholic Chaplaincy, Oleh",
+    siteName: "St. Peter Catholic Chaplaincy, Oleh",
+    title: "St. Peter Catholic Chaplaincy, Oleh",
     description:
-      "Official website of St. Peter's Catholic Chaplaincy, Oleh Campus. Join us for Mass, parish activities, and spiritual growth.",
+      "Official website of St. Peter Catholic Chaplaincy, Oleh Campus. Join us for Mass, parish activities, and spiritual growth.",
     images: [
       {
         url: "/icon-st%20peter.png",
         width: 512,
         height: 512,
-        alt: "St. Peter's Catholic Chaplaincy Logo",
+        alt: "St. Peter Catholic Chaplaincy Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "St. Peter's Catholic Chaplaincy, Oleh",
+    title: "St. Peter Catholic Chaplaincy, Oleh",
     description:
-      "Official website of St. Peter's Catholic Chaplaincy, Oleh Campus. Join us for Mass, parish activities, and spiritual growth.",
+      "Official website of St. Peter Catholic Chaplaincy, Oleh Campus. Join us for Mass, parish activities, and spiritual growth.",
     images: ["/icon-st%20peter.png"],
   },
   robots: {

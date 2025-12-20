@@ -572,7 +572,7 @@ export default function AboutPage() {
     },
     {
       name: "Rev. Fr. Cyril Basikoro",
-      position: "Chaplain: St. Peter's Catholic Chaplaincy, Oleh Campus",
+      position: "Chaplain: St. Peter Catholic Chaplaincy, Oleh Campus",
       image: "/parish-priest-on-mic.jpg",
     },
   ];
@@ -586,7 +586,7 @@ export default function AboutPage() {
           {/* Hero Section */}
           <div>
             <h1 className="text-3xl font-bold mb-4 lg:text-5xl lg:mb-6 text-[#441A05] text-center">
-              About St. Peter&apos;s Catholic Chaplaincy, Oleh Campus
+              About St. Peter Catholic Chaplaincy, Oleh Campus
             </h1>
             <p className="text-base text-gray-700 leading-relaxed lg:text-2xl max-w-3xl mx-auto">
               A welcoming community committed to faith, service and fellowship
@@ -600,13 +600,13 @@ export default function AboutPage() {
               History
             </h2>
             <p className="text-base text-gray-700 leading-relaxed lg:text-2xl">
-              St. Peter&apos;s Catholic Chaplaincy, Oleh, was established in
-              February, 2015 by the then Bishop, Most Revd. John Okeoghene
-              Afareha, to serve the spiritual needs of the Catholic faithful
-              within the community with the first Parish Priest being Rev. Fr.
-              Israel Inaede. Over the years, the Chaplaincy has grown into a
-              place of worship, unity, and spiritual nourishment, fostering
-              strong bonds among its members and promoting Catholic values.
+              St. Peter Catholic Chaplaincy, Oleh, was established in February,
+              2015 by the then Bishop, Most Revd. John Okeoghene Afareha, to
+              serve the spiritual needs of the Catholic faithful within the
+              community with the first Parish Priest being Rev. Fr. Israel
+              Inaede. Over the years, the Chaplaincy has grown into a place of
+              worship, unity, and spiritual nourishment, fostering strong bonds
+              among its members and promoting Catholic values.
             </p>
           </section>
 
@@ -726,7 +726,7 @@ export default function AboutPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="St. Peter's Catholic Chaplaincy Location"
+                title="St. Peter Catholic Chaplaincy Location"
               />
             </div>
           </section>

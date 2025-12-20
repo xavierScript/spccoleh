@@ -6,11 +6,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Parish Activities",
   description:
-    "Discover parish activities at St. Peter's Catholic Chaplaincy, Oleh including daily Mass schedule, adoration, confessions, choir practice, and student fellowship programs.",
+    "Discover parish activities at St. Peter Catholic Chaplaincy, Oleh including daily Mass schedule, adoration, confessions, choir practice, and student fellowship programs.",
   openGraph: {
     title: "Parish Activities - SPCC Oleh",
     description:
-      "Join our weekly activities: Daily Mass, Eucharistic Adoration, Confessions, Choir, and Student Fellowships at St. Peter's Catholic Chaplaincy, Oleh.",
+      "Join our weekly activities: Daily Mass, Eucharistic Adoration, Confessions, Choir, and Student Fellowships at St. Peter Catholic Chaplaincy, Oleh.",
     type: "website",
   },
 };

@@ -72,7 +72,7 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Church",
-    name: "St. Peter's Catholic Chaplaincy, Oleh",
+    name: "St. Peter Catholic Chaplaincy, Oleh",
     alternateName: "SPCC Oleh",
     description:
       "Catholic chaplaincy serving students and staff at Delta State University, Oleh Campus",
@@ -117,7 +117,7 @@ export default function Home() {
             <ContentCard
               title="Parish Activities"
               subtitle="OUR PROGRAM"
-              description="Discover the variety of activities organized at St. Peter's Parish. Join us and be part of our vibrant parish life."
+              description="Discover the variety of activities organized at St. Peter Parish. Join us and be part of our vibrant parish life."
               buttonText="See more"
               buttonHref="/parish-activities"
               imageSrc="/picture-missal.jpg"

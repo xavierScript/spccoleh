@@ -159,7 +159,7 @@ export default function Header() {
         {/* Center title */}
         <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
           <h1 className="text-white text-xl lg:text-5xl xl:text-6xl font-bold leading-tight lg:leading-tight drop-shadow-2xl">
-            St. Peter&apos;s Catholic
+            St. Peter Catholic
             <br />
             Chaplaincy, Oleh Campus
           </h1>
