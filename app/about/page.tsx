@@ -84,7 +84,7 @@ const cmoExcos = [
     image: "/exco-placeholder.jpg",
   },
   {
-    name: "Mr. Bassey",
+    name: "Mr. Anthony Obasi",
     position: "Financial Secretary",
     image: "/exco-placeholder.jpg",
   },
