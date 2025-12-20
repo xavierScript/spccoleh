@@ -44,7 +44,7 @@ const cwoExcos = [
     image: "/exco-placeholder.jpg",
   },
   {
-    name: "Mrs Ogochukwu",
+    name: "Mrs Justina Ogochukwu",
     position: "PRO 2",
     image: "/exco-placeholder.jpg",
   },
