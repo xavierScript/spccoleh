@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
@@ -14,6 +16,7 @@ const navigationLinks = [
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const pathname = usePathname();
   return (
     <>
       {/* Overlay */}
@@ -61,30 +64,45 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
           <nav>
             <ul className="space-y-1">
-              {navigationLinks.map((link, index) => (
-                <li
-                  key={link.href}
-                  className={`transition-all duration-300 ${
-                    isOpen
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-0 -translate-x-4"
-                  }`}
-                  style={{
-                    transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
-                  }}
-                >
-                  <a
-                    href={link.href}
-                    className="text-white/90 text-base block py-3 px-4 rounded-lg hover:bg-white/10 hover:text-white hover:pl-6 transition-all duration-200 relative group"
-                    onClick={onClose}
+              {navigationLinks.map((link, index) => {
+                const isActive =
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname?.startsWith(link.href));
+
+                return (
+                  <li
+                    key={link.href}
+                    className={`transition-all duration-300 ${
+                      isOpen
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-4"
+                    }`}
+                    style={{
+                      transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
+                    }}
                   >
-                    <span className="relative">
-                      {link.label}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/80 group-hover:w-full transition-all duration-300" />
-                    </span>
-                  </a>
-                </li>
-              ))}
+                    <a
+                      href={link.href}
+                      className={`text-white/90 text-base block py-3 px-4 rounded-lg hover:bg-white/10 hover:text-white hover:pl-6 transition-all duration-200 relative group ${
+                        isActive ? "bg-white/20 text-white" : ""
+                      }`}
+                      onClick={onClose}
+                      aria-current={isActive ? "page" : undefined}
+                    >
+                      <span className="relative">
+                        {link.label}
+                        <span
+                          className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${
+                            isActive
+                              ? "w-full bg-white/90"
+                              : "w-0 bg-white/80 group-hover:w-full"
+                          }`}
+                        />
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </div>

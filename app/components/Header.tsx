@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigationLinks = [
   { label: "Home", href: "/" },
@@ -15,6 +16,7 @@ const navigationLinks = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -76,17 +78,32 @@ export default function Header() {
 
             {/* Navigation Links */}
             <ul className="flex items-center gap-8">
-              {navigationLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white text-base font-semibold hover:text-white/80 transition-colors relative group py-2"
-                  >
-                    {link.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-                  </Link>
-                </li>
-              ))}
+              {navigationLinks.map((link) => {
+                const isActive =
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname?.startsWith(link.href));
+
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`text-white text-base font-semibold transition-colors relative group py-2 ${
+                        isActive ? "text-white/100" : "hover:text-white/80"
+                      }`}
+                      aria-current={isActive ? "page" : undefined}
+                    >
+                      {link.label}
+                      <span
+                        className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${
+                          isActive
+                            ? "w-full bg-white"
+                            : "w-0 bg-white group-hover:w-full"
+                        }`}
+                      />
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </nav>
