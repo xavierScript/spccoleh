@@ -29,7 +29,7 @@ export default function ContentCard({
 }: ContentCardProps) {
   const { openLightbox } = useLightbox();
 
-  const buttonClasses = `bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block text-center ${
+  const buttonClasses = `bg-[#441A05] text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-base font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-block text-center ${
     shouldShake ? "shake-button" : ""
   }`;
 
@@ -38,21 +38,21 @@ export default function ContentCard({
       {/* Content card */}
       <section className="rounded-lg">
         {subtitle && (
-          <h2 className="text-center text-[#441A05] font-bold text-sm">
+          <h2 className="text-center text-[#441A05] font-bold text-sm lg:text-base">
             {subtitle}
           </h2>
         )}
 
-        <h3 className="text-[#441A05] font-bold text-xl mb-3 text-center">
+        <h3 className="text-[#441A05] font-bold text-xl lg:text-2xl mb-3 lg:mb-4 text-center">
           {title}
         </h3>
 
-        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+        <p className="text-sm lg:text-base text-gray-700 leading-relaxed mb-4">
           {description}
         </p>
 
         {meetingTime && (
-          <p className="text-sm text-gray-500 italic mb-4 whitespace-pre-line">
+          <p className="text-sm lg:text-base text-gray-500 italic mb-4 whitespace-pre-line">
             {meetingTime}
           </p>
         )}
