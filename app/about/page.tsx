@@ -566,7 +566,7 @@ export default function AboutPage() {
     },
 
     {
-      name: "Very Rev. Fr. Dr. Stephen Ogheneovo CSP",
+      name: "Very Rev. Fr. Dr. Stephen Ogheneovo C.SP",
       position: "Regional Vicar for Oleh Region",
       image: "/father-stephen.jpeg",
     },

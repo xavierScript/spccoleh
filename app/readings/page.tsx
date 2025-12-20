@@ -19,14 +19,14 @@ export default function ReadingsPage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <main className="px-4 py-12 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-[#441A05]">
+      <main className="px-4 py-12 max-w-6xl mx-auto lg:px-20">
+        <h1 className="text-3xl lg:text-5xl font-bold mb-6 lg:mb-8 text-[#441A05]">
           Daily Mass Readings
         </h1>
 
         {/* Attribution */}
         <div className="bg-gray-100 border-l-4 border-[#441A05] p-4 rounded mb-6">
-          <p className="text-sm text-gray-700">
+          <p className="text-sm lg:text-base text-gray-700">
             <strong>Source:</strong> Daily Mass readings provided by{" "}
             <a
               href="https://universalis.com/"
@@ -38,7 +38,7 @@ export default function ReadingsPage() {
             </a>{" "}
             - Liturgy of the Hours and Mass Readings for Africa/Nigeria.
           </p>
-          <p className="text-xs text-gray-600 mt-2">
+          <p className="text-xs lg:text-sm text-gray-600 mt-2">
             All content © Universalis Publishing. Visit{" "}
             <a
               href="https://universalis.com/africa.nigeria/mass.htm"

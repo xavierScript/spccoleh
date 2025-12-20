@@ -20,10 +20,10 @@ export default function ParishActivitiesPage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <main className="px-4 py-12 lg:px-0 lg:py-0">
+      <main className="px-4 py-12 lg:px-8 lg:py-0">
         {/* Page Header - Full Width on Desktop */}
         <div className="max-w-3xl mx-auto mb-8 lg:max-w-7xl lg:px-20 lg:py-16 lg:mb-0">
-          <h1 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 text-[#441A05]">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 text-[#441A05] text-center">
             Parish Activities
           </h1>
           <p className="text-base lg:text-2xl text-gray-700 leading-relaxed">
