@@ -74,6 +74,11 @@ export const metadata: Metadata = {
   verification: {
     google: "jc0ATc7MPz8lND3soMLb2NBx4cYZRtS5Ww5kcaiExiI",
   },
+  icons: {
+    icon: "/icon-st%20peter.png",
+    shortcut: "/icon-st%20peter.png",
+    apple: "/icon-st%20peter.png",
+  },
 };
 
 export default function RootLayout({
@@ -83,10 +88,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Favicon: St. Peter logo in public folder (space encoded) */}
-        <link rel="icon" href="/icon-st%20peter.png" />
-      </head>
       <body className={`${nunitoSans.variable} antialiased`}>
         <LightboxProvider>
           {children}
