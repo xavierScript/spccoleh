@@ -235,9 +235,95 @@ export default function Home() {
           </button>
         </div>
 
+        {/* Diocesan Plans and Programs PDF */}
         <div
           ref={(el) => {
             buttonRefs.current[4] = el;
+          }}
+          className="space-y-4 mb-12"
+        >
+          <div className="rounded-lg">
+            <h3 className="text-[#441A05] font-bold text-xl mb-3 text-center">
+              Diocesan Year of Sacramental Life
+            </h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              View the plans and programs for the Diocesan Year of Sacramental
+              Life. Learn about the initiatives and activities planned to deepen
+              our sacramental understanding and practice.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="/files/Plans and Programs - Diocesan Year of Sacramental Life .pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-[#441A05] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-[#441A05] hover:ring-2 hover:ring-[#441A05] transition-all duration-300 inline-flex items-center gap-2`}
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+                View PDF
+              </a>
+              <a
+                href="/files/Plans and Programs - Diocesan Year of Sacramental Life .pdf"
+                download
+                className={`bg-white text-[#441A05] px-5 py-2 rounded-full text-sm font-semibold ring-2 ring-[#441A05] hover:bg-[#441A05] hover:text-white transition-all duration-300 inline-flex items-center gap-2 `}
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+                Download PDF
+              </a>
+            </div>
+          </div>
+
+          {/* PDF Preview Image/Icon */}
+          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-[#441A05] to-[#6b2e0d] flex items-center justify-center">
+            <div className="text-center text-white p-8">
+              <svg
+                className="w-20 h-20 mx-auto mb-4 opacity-90"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" />
+                <path d="M14 2v6h6M10 15.5v-5M13 13.5v-3M7 14.5v-4" />
+              </svg>
+              <p className="text-lg font-bold">Plans and Programs</p>
+              <p className="text-sm opacity-80 mt-1">
+                Diocesan Year of Sacramental Life
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          ref={(el) => {
+            buttonRefs.current[5] = el;
           }}
         >
           <ContentCard
@@ -247,16 +333,8 @@ export default function Home() {
             buttonHref="https://usccb.cld.bz/Catechism-of-the-Catholic-Church2/4/"
             imageSrc="/picture-bible.jpg"
             imageAlt="Catechism Corner"
-            shouldShake={shakeButtons.has(4)}
+            shouldShake={shakeButtons.has(5)}
           />
-        </div>
-
-        <div
-          ref={(el) => {
-            buttonRefs.current[5] = el;
-          }}
-        >
-          <ChurchSocietySection shouldShake={shakeButtons.has(5)} />
         </div>
 
         <div
@@ -264,7 +342,15 @@ export default function Home() {
             buttonRefs.current[6] = el;
           }}
         >
-          <StationsSection shouldShake={shakeButtons.has(6)} />
+          <ChurchSocietySection shouldShake={shakeButtons.has(6)} />
+        </div>
+
+        <div
+          ref={(el) => {
+            buttonRefs.current[7] = el;
+          }}
+        >
+          <StationsSection shouldShake={shakeButtons.has(7)} />
         </div>
       </main>
 
