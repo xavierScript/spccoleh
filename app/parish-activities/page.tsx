@@ -42,7 +42,7 @@ export default function ParishActivitiesPage() {
             imageSrc="/priests-consecrating.jpg"
             imageAlt="Priests consecrating the Eucharist"
             meetingTime={
-              "Mondays, Wednesdays, Fridays — 5:00 PM\nTuesdays, Thursdays, Saturdays — 6:30 AM\nSundays — 6:00 AM and 7:00 AM (when school is in session) otherwise 6:30 AM"
+              "Mondays, Wednesdays & Fridays — 5:00 PM\nTuesdays, Thursdays & Saturdays — 6:30 AM\nSundays — First Mass: 6:00 AM; Second Mass: 7:00 AM (during school session). Otherwise, one Mass at 6:30 AM. Every Second Sunday (during session or not): one Mass at 6:30 AM"
             }
             isReversed={false}
           />
