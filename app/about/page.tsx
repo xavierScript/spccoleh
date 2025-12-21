@@ -719,7 +719,7 @@ export default function AboutPage() {
             </h2>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8087563896845!2d6.202815!3d5.587556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ad7d7f8e6f5d%3A0x1f1e2b3c4d5e6f7a!2sOleh%2C%20Delta%20State%2C%20Nigeria!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4123.26430217305!2d6.200959182244712!3d5.448683089131508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041930007c7a64b%3A0xebd431cae23b9c4d!2sSt.%20Peter%20Catholic%20Chaplaincy%2C%20DELSU%20Oleh%20Campus!5e1!3m2!1sen!2sng!4v1766317355747!5m2!1sen!2sng"
                 width="100%"
                 height="450"
                 className="border-0"
